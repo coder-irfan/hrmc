@@ -5,9 +5,9 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'burjezamin',
+  title: 'HRMC - Habib Rohani Medical Center',
 
-  projectId: 'chxx9nq4',
+  projectId: 'hb4frq5b',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
