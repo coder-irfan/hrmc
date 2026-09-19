@@ -24,14 +24,14 @@ const LanguageSync = () => {
   useEffect(() => {
     if (!lang) return;
 
-    const validLangs = ["en", "fa"];
+    const validLangs = ["en", "fa", "ps"];
     const targetLang = validLangs.includes(lang) ? lang : "en";
 
     if (i18n.language !== targetLang) {
       i18n.changeLanguage(targetLang);
     }
 
-    const isRtl = ["fa"].includes(targetLang);
+    const isRtl = ["fa", "ps"].includes(targetLang);
     document.documentElement.setAttribute("lang", targetLang);
     document.documentElement.setAttribute("dir", isRtl ? "rtl" : "ltr");
   }, [lang, i18n]);

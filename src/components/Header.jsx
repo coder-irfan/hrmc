@@ -1,53 +1,33 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate, NavLink, useParams, useLocation } from "react-router-dom";
-import {
-  FaInstagram,
-  FaFacebook,
-  FaYoutube,
-  FaTelegram,
-  FaBars,
-  FaTimes,
-} from "react-icons/fa";
-
-import { PhoneCall } from "lucide-react";
-
-import ReactCountryFlag from "react-country-flag";
+import { NavLink, useParams, useNavigate, useLocation } from "react-router-dom";
+import { Globe, Phone, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import ReactCountryFlag from "react-country-flag";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const [isGlobeOpen, setIsGlobeOpen] = useState(false);
 
   const { lang = "en" } = useParams();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  /* Language Translations */
-  const [isGlobeOpen, setIsGlobeOpen] = useState(false);
   const { t, i18n } = useTranslation();
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const navLinks = [
+    { name: t("home"), path: `/${lang}`, end: true },
+    { name: t("about"), path: `/${lang}/about` },
+    { name: t("services"), path: `/${lang}/services` },
+    { name: t("doctors"), path: `/${lang}/doctors` },
+    { name: t("gallery"), path: `/${lang}/gallery` },
+    { name: t("blog"), path: `/${lang}/blog` },
+    { name: t("contact"), path: `/${lang}/contact` },
+  ];
 
   const languages = [
     { code: "en", label: "English", countryCode: "US" },
     { code: "fa", label: "دری", countryCode: "AF" },
   ];
-
-  const safeLang = i18n.language || "en";
-
-  const currentLang =
-    languages.find((lang) => lang.code === safeLang) || languages[0];
 
   const dropdownRef = useRef(null);
 
@@ -59,294 +39,215 @@ function Header() {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
-    <>
-      <header dir="ltr" className="relative font-medium">
-        <div
-          className={`2xl:max-w-[100rem] mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-3 xl:px-16 fixed top-0 right-0 left-0 z-[60]
-          transition-all duration-300
-          ${
-            isScrolled
-              ? "backdrop-blur-md backdrop-saturate-150 shadow-sm shadow-colors-textDarkGray/10"
-              : "bg-transparent"
-          }`}
-        >
-          <div
-            className={`md:hidden fixed w-screen h-screen opacity-100 inset-0 bg-colors-bg transition-all duration-700 z-20
-            ${
-              isOpen
-                ? "translate-x-0 pointer-events-auto"
-                : "translate-x-full delay-200 pointer-events-none"
-            }`}
-          ></div>
+    <header className="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-gray-100 shadow-sm">
+      <div className="relative px-4 sm:px-6 lg:px-16 h-14 lg:h-20 flex items-center justify-between">
+        {/* MOBILE CALL ICON (Left) */}
+        <div className="md:hidden flex items-center">
+          <a
+            href="tel:+93799123456"
+            className="w-9 h-9 rounded-full bg-colors-primaryColor flex items-center justify-center text-white"
+            aria-label="Call Us"
+          >
+            <Phone className="w-4 h-4 fill-current" />
+          </a>
+        </div>
 
-          <div className="flex items-center justify-between">
+        <div className="flex items-center justify-center md:justify-start">
+          <NavLink to={`/${lang}`}>
             <img
-              src={`${
-                isScrolled
-                  ? "/images/logo-blue-english.webp"
-                  : "/images/logo-white-english.webp"
-              }`}
-              alt="logo"
-              className="w-32 lg:w-44 object-contain"
+              src="/images/logo.png"
+              alt="Logo"
+              className="h-10 md:h-12 w-auto object-contain"
             />
+          </NavLink>
+        </div>
 
-            <div className="z-50">
-              <nav
-                className={`md:relative fixed top-0 right-0 h-full md:right-0 transition-all duration-700 pt-24 pr-6 md:pr-0 md:pt-0
-                md:h-auto md:w-auto md:translate-x-0 ${
-                  isOpen ? "translate-x-0" : "translate-x-full"
-                }`}
-              >
-                <div className="md:hidden absolute top-0 left-4 py-5">
-                  <img
-                    src="/images/logo-blue-english.webp"
-                    alt="logo"
-                    className="w-44 object-contain"
-                  />
-                </div>
+        {/* CENTER / DESKTOP NAVIGATION LINKS */}
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-base lg:text-lg font-medium">
+          {navLinks.map((link, index) => (
+            <NavLink
+              key={index}
+              to={link.path}
+              end={link.end}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active-nav-link" : ""}`
+              }
+            >
+              {link.name}
+            </NavLink>
+          ))}
+        </nav>
 
-                <div className="flex flex-col md:flex-row items-end gap-8">
-                  <ul
-                    className={`flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 lg:text-lg text-colors-textDarkColor ${
-                      isScrolled
-                        ? "md:text-colors-textDarkColor"
-                        : "md:text-colors-textLightColor"
-                    }`}
-                  >
-                    {/* HOME LINK */}
-                    <li className="font-semibold">
-                      <NavLink
-                        to={`/${lang}`}
-                        end
-                        onClick={() => setIsOpen(false)}
-                        className={({ isActive }) =>
-                          `hover-link ${isActive ? "active-link" : ""}`
-                        }
-                      >
-                        {t("home")}
-                      </NavLink>
-                    </li>
+        {/* MOBILE HAMBURGER BUTTON (Right) */}
+        <div className="md:hidden flex items-center">
+          <button
+            onClick={() => setIsOpen(true)}
+            className="w-9 h-9 rounded-full bg-colors-primaryColor flex items-center justify-center p-2"
+            aria-label="Open menu"
+          >
+            <img
+              src="/images/textalign-right.svg"
+              alt="Menu"
+              className="w-5 h-5 filter brightness-0 invert"
+            />
+          </button>
+        </div>
 
-                    <div className="md:hidden w-screen h-[1px] -mr-6 bg-colors-textDarkColor/40"></div>
+        {/* LEFT SECTION (Desktop Call Block) */}
+        <div className="hidden xl:flex items-center gap-3">
+          <a
+            href="tel:+93799123456"
+            className="w-10 h-10 rounded-full bg-colors-primaryColor flex items-center justify-center text-colors-textLightColor hover:opacity-90 transition-opacity"
+            aria-label="Call Us"
+          >
+            <Phone className="w-5 h-5" />
+          </a>
+          <div className="flex flex-col text-start">
+            <span className="text-xs text-colors-textLightGray font-normal">
+              {t("callUs")}
+            </span>
+            <a
+              href="tel:+93799123456"
+              className="text-sm font-bold text-colors-textDarkGray hover:text-colors-primaryColor transition-colors"
+            >
+              <bdi>+93 79 912 3456</bdi>
+            </a>
+          </div>
+        </div>
 
-                    <li className="hidden md:flex opacity-25">|</li>
+        <div className="flex items-center sm:gap-4 absolute start-16 sm:start-20 md:start-40 lg:start-48 bg-colors-primaryColor p-2 rounded-full">
+          <div className="relative" ref={dropdownRef}>
+            <button
+              className="flex text-colors-textLightColor items-center gap-2 cursor-pointer uppercase"
+              onClick={() => setIsGlobeOpen(!isGlobeOpen)}
+              aria-expanded={isGlobeOpen}
+              aria-label="Change language"
+            >
+              <Globe />
+            </button>
 
-                    {/* ABOUT US LINK */}
-                    <li className="font-semibold">
-                      <NavLink
-                        to={`/${lang}/about`}
-                        onClick={() => setIsOpen(false)}
-                        className={({ isActive }) =>
-                          `hover-link ${isActive ? "active-link" : ""}`
-                        }
-                      >
-                        {t("about")}
-                      </NavLink>
-                    </li>
-
-                    <div className="md:hidden w-screen h-[1px] -mr-6 bg-colors-textDarkColor/40"></div>
-
-                    <li className="hidden md:flex opacity-25">|</li>
-
-                    {/* SERVICES LINK */}
-                    <li className="font-semibold">
-                      <NavLink
-                        to={`/${lang}/services`}
-                        onClick={() => setIsOpen(false)}
-                        className={({ isActive }) =>
-                          `hover-link ${isActive ? "active-link" : ""}`
-                        }
-                      >
-                        {t("services")}
-                      </NavLink>
-                    </li>
-
-                    <div className="md:hidden w-screen h-[1px] -mr-6 bg-colors-textDarkColor/40"></div>
-
-                    <li className="hidden md:flex opacity-25">|</li>
-
-                    {/* PROJECTS LINK */}
-                    <li className="font-semibold">
-                      <NavLink
-                        to={`/${lang}/projects`}
-                        onClick={() => setIsOpen(false)}
-                        className={({ isActive }) =>
-                          `hover-link ${isActive ? "active-link" : ""}`
-                        }
-                      >
-                        {t("projects")}
-                      </NavLink>
-                    </li>
-
-                    <div className="md:hidden w-screen h-[1px] -mr-6 bg-colors-textDarkColor/40"></div>
-
-                    <li className="hidden md:flex opacity-25">|</li>
-
-                    {/* CONTACT LINK */}
-                    <li className="font-semibold">
-                      <NavLink
-                        to={`/${lang}/contact`}
-                        onClick={() => setIsOpen(false)}
-                        className={({ isActive }) =>
-                          `hover-link ${isActive ? "active-link" : ""}`
-                        }
-                      >
-                        {t("contact")}
-                      </NavLink>
-                    </li>
-
-                    <div className="md:hidden w-screen h-[1px] -mr-6 bg-colors-textDarkColor/40"></div>
-                  </ul>
-
-                  {/* MOBILE CONTACT BUTTON */}
-                  <div className="md:hidden text-sm z-10">
-                    <NavLink
-                      to={`/${lang}/contact`}
-                      onClick={() => setIsOpen(false)}
-                      className="button"
+            {isGlobeOpen && (
+              <div className="absolute start-0 mt-5 me-4 md:me-0 w-36 bg-colors-bg rounded-md shadow-[0_0_0.3rem] shadow-colors-textDarkGray z-10 p-2 text-sm md:text-base">
+                <ul className="">
+                  {languages.map((lang) => (
+                    <li
+                      className="px-3 py-2 hover:bg-colors-primaryColorDark hover:text-colors-textLightColor hover:rounded-md cursor-pointer flex items-center gap-3 transition-all duration-200"
+                      key={lang.code}
+                      onClick={() => {
+                        i18n.changeLanguage(lang.code);
+                        const currentPath = location.pathname;
+                        const updatedPath = currentPath.replace(
+                          /^\/[a-zA-Z]{2}/,
+                          `/${lang.code}`,
+                        );
+                        navigate(
+                          `${updatedPath}${location.search}${location.hash}`,
+                        );
+                        setIsGlobeOpen(false);
+                      }}
                     >
-                      {t("contactUs")}
-                      <PhoneCall className="w-5 h-5" />
-                    </NavLink>
-                  </div>
+                      <ReactCountryFlag
+                        countryCode={lang?.countryCode || "US"}
+                        svg
+                        className="text-xl"
+                      />
 
-                  {/* SOCIAL LINKS */}
-                  <div className="md:hidden flex flex-wrap justify-center items-center gap-2 lg:gap-4 text-xl md:text-2xl xl:text-3xl">
-                    <a
-                      href="https://www.instagram.com/burjezamin?igsh=MW8yenlqdnFlaWJlcw=="
-                      className="media-link"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <FaInstagram />
-                    </a>
-                    <a
-                      href="https://www.youtube.com/"
-                      className="media-link"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <FaYoutube />
-                    </a>
-                    <a
-                      href="https://www.facebook.com/share/14ouu5honQm/?mibextid=LQQJ4d"
-                      className="media-link"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <FaFacebook />
-                    </a>
-                    <a
-                      href="https://telegram.com/"
-                      className="media-link"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <FaTelegram />
-                    </a>
-                  </div>
-                </div>
-
-                {isOpen && (
-                  <div
-                    className="absolute top-5 right-5 sm:right-6 text-[1.4rem] md:hidden border border-colors-primaryColorDark rounded-md p-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <FaTimes
-                      className="cursor-pointer text-colors-primaryColorDark"
-                      aria-label="Close menu"
-                    />
-                  </div>
-                )}
-              </nav>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="relative" ref={dropdownRef}>
-                <button
-                  className={`flex items-center gap-2 mr-10 md:mr-0 cursor-pointer hover:text-colors-textDarkGray transition-all duration-300 uppercase
-                    ${
-                      isScrolled
-                        ? "text-colors-textDarkColor"
-                        : "text-colors-textLightColor"
-                    }`}
-                  onClick={() => setIsGlobeOpen(!isGlobeOpen)}
-                  aria-expanded={isGlobeOpen}
-                  aria-label="Change language"
-                >
-                  <ReactCountryFlag
-                    countryCode={currentLang?.countryCode || "US"}
-                    svg
-                    className="text-2xl"
-                  />
-                </button>
-
-                {isGlobeOpen && (
-                  <div
-                    className="absolute right-0 mt-5 mr-4 md:mr-0 w-36 bg-colors-bg rounded-md shadow-[0_0_0.3rem] shadow-colors-textDarkGray z-10 p-2
-                    text-sm md:text-base"
-                  >
-                    <ul className="">
-                      {languages.map((lang) => (
-                        <li
-                          className="px-3 py-2 hover:bg-colors-primaryColorDark hover:text-colors-textLightColor hover:rounded-md cursor-pointer flex items-center gap-3 transition-all duration-200"
-                          key={lang.code}
-                          onClick={() => {
-                            i18n.changeLanguage(lang.code);
-
-                            // Replace current language segment in URL with new language code
-                            const currentPath = location.pathname;
-                            const updatedPath = currentPath.replace(
-                              /^\/[a-zA-Z]{2}/,
-                              `/${lang.code}`,
-                            );
-
-                            navigate(
-                              `${updatedPath}${location.search}${location.hash}`,
-                            );
-                            setIsGlobeOpen(false);
-                          }}
-                        >
-                          <ReactCountryFlag
-                            countryCode={lang?.countryCode || "US"}
-                            svg
-                            className="text-xl"
-                          />
-                          <span className="">{lang.label}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-
-              <div className="hidden lg:flex items-center gap-2">
-                <NavLink to={`/${lang}/contact`} className="button">
-                  {t("contactUs")}
-                  <PhoneCall className="w-5 h-5" />
-                </NavLink>
-              </div>
-            </div>
-
-            {!isOpen && (
-              <div
-                className={`absolute top-4 right-5 sm:right-6 text-[1rem] md:hidden border rounded-md p-1 ${isScrolled ? "border-colors-primaryColorDark" : "border-colors-textLightColor"}`}
-                onClick={() => setIsOpen(true)}
-              >
-                <FaBars
-                  aria-label="Open menu"
-                  className={`cursor-pointer ${isScrolled ? "text-colors-primaryColorDark" : "text-colors-textLightColor"}`}
-                />
+                      <span className="">{lang.label}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
           </div>
         </div>
-      </header>
-    </>
+      </div>
+
+      {/* MOBILE DRAWER OVERLAY & MENU (70% Width) */}
+      {/* Backdrop */}
+      <div
+        className={`fixed inset-0 bg-black/80 z-50 transition-opacity duration-300 md:hidden ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsOpen(false)}
+      />
+
+      {/* Drawer */}
+      <aside
+        className={`fixed top-0 right-0 h-full w-[70%] bg-white z-50 shadow-2xl transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-between ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="p-6">
+          {/* Header inside drawer */}
+          <div className="flex items-center justify-between pb-4 border-b border-textLightGray mb-6">
+            <img
+              src="/images/logo.png"
+              alt="Logo"
+              className="h-8 w-auto object-contain"
+            />
+            <button
+              onClick={() => setIsOpen(false)}
+              className="rounded-full bg-colors-primaryColor text-colors-textLightColor flex items-center justify-center p-2"
+              aria-label="Close menu"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Nav links */}
+          <ul className="flex flex-col gap-2 text-start">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <NavLink
+                  to={link.path}
+                  end={link.end}
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    `block py-2 text-lg  ${
+                      isActive
+                        ? "text-colors-primaryColor font-bold"
+                        : "text-colors-textDarkGray hover:text-colors-primaryColor font-medium"
+                    }`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Footer inside drawer */}
+        <div className="p-6 border-t border-gray-100 bg-colors-secondBg">
+          <div className="flex items-center gap-3">
+            <a
+              href="tel:+93799123456"
+              className="w-8 h-8 rounded-full bg-colors-primaryColor flex items-center justify-center text-white"
+            >
+              <Phone className="w-4 h-4 fill-current" />
+            </a>
+            <div className="flex flex-col text-start">
+              <span className="text-xs text-colors-textLightGray font-normal">
+                {t("callUs")}
+              </span>
+              <a
+                href="tel:+93799123456"
+                className="text-sm font-bold text-colors-textDarkGray hover:text-colors-primaryColor transition-colors"
+              >
+                <bdi>+93 79 912 3456</bdi>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </header>
   );
 }
 

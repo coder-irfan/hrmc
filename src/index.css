@@ -179,14 +179,12 @@ html[lang="fa"] h1 {
   line-height: 1.5;
 }
 
-.hover-link {
-  @apply relative after:absolute after:left-1/2 after:-bottom-1 after:w-0 after:h-[0.185rem] after:bg-colors-secondTextColor after:transition-all
-    after:duration-500 hover:after:left-0 hover:after:w-full;
+.nav-link {
+  @apply text-colors-textDarkColor transition-colors duration-200 hover:text-colors-primaryColorDark;
 }
 
-.active-link::after {
-  width: 100% !important;
-  left: 0 !important;
+.active-nav-link {
+  @apply text-colors-primaryColorDark font-bold;
 }
 
 .button {

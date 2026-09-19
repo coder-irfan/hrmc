@@ -10,10 +10,13 @@ export default {
           thirdBg: "#051441",
           buttonBg: "#064da1",
           buttonHover: "#064da1",
+          textLightGray: "#707070",
           textDarkColor: "#131314",
           textDarkGray: "#383838",
           textLightColor: "#ffffff",
           secondTextColor: "#ed1c23",
+          primaryColor: "#064da1",
+          secondaryColor: "#ed1c23",
 
           primaryColorLightesh: "#3871b4",
           primaryColorDarkesh: "#054591",
@@ -81,10 +84,24 @@ export default {
           "70%": { transform: "scale(1.5)", opacity: "0" },
           "100%": { opacity: "0" },
         },
+        floatBouncing: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        shimmerEffect: {
+          "100%": { transform: "translateX(100%)" },
+        },
+        pulseRed: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.4" },
+        },
       },
       animation: {
         "ping-slow": "pingSlow 3s linear infinite",
         "ping-slower": "pingSlower 4s linear infinite",
+        floatBouncing: "float 4s ease-in-out infinite",
+        shimmerEffect: "shimmer 1.8s infinite",
+        "pulse-red": "pulseRed 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },

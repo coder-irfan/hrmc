@@ -1,10 +1,12 @@
 {
   "home": "Home",
   "about": "About Us",
-  "services": "Our Services",
-  "projects": "Our Projects",
-  "contact": "Contact Us",
-  "contactUs": "Contact Us",
+  "services": "Services",
+  "doctors": "Doctors",
+  "gallery": "Gallery",
+  "blog": "Blog",
+  "contact": "Contact",
+  "callUs": "Call Us",
 
   "heroTagline": "Construction & Engineering",
   "heroTagline2": "Building Trust & Quality",
