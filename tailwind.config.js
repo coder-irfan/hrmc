@@ -5,20 +5,48 @@ export default {
     extend: {
       colors: {
         colors: {
-          bg: "#ffffff", // Body
-          secondBg: "#ececec", // Sections
-          thirdBg: "#051441", // Special Bg Color
-          buttonBg: "rgb(225, 182, 95)", // Button Bg Color
-          buttonHover: "rgb(225, 182, 75)", // Button Hover
-          textDarkColor: "#131314", // Dark Text Color
-          textDarkGray: "#383838", // Dark Text Color
-          textLightColor: "#ffffff", // White Text Color
-          secondTextColor: "rgb(225, 182, 95)", // Special Text Color
-          blueColorLightesh: "#1659a9",
-          blueColorDarkesh: "#194891",
-          blueColorDark: "#0156b0",
-          blueColorVeryDark: "#013e7f",
-          red: "#F27070", // Error Color
+          bg: "#ffffff",
+          secondBg: "#e6edf6",
+          thirdBg: "#051441",
+          buttonBg: "#064da1",
+          buttonHover: "#064da1",
+          textDarkColor: "#131314",
+          textDarkGray: "#383838",
+          textLightColor: "#ffffff",
+          secondTextColor: "#ed1c23",
+
+          primaryColorLightesh: "#3871b4",
+          primaryColorDarkesh: "#054591",
+          primaryColorDark: "#064da1",
+          primaryColorVeryDark: "#032751",
+          red: "#ed1c23",
+
+          primary: {
+            DEFAULT: "#064da1",
+            50: "#e6edf6",
+            100: "#cddbec",
+            200: "#b4cae3",
+            300: "#6a94c7",
+            400: "#3871b4",
+            500: "#064da1", // Core Brand Primary
+            600: "#054591",
+            700: "#043671",
+            800: "#032751",
+            900: "#010f20",
+          },
+          accent: {
+            DEFAULT: "#ed1c23",
+            50: "#fde8e9",
+            100: "#fbd2d3",
+            200: "#fabbbd",
+            300: "#f68e91",
+            400: "#f26065",
+            500: "#ed1c23", // Core Brand Accent
+            600: "#d51920",
+            700: "#a61419",
+            800: "#770e12",
+            900: "#2f0607",
+          },
         },
       },
       backgroundImage: {
@@ -40,7 +68,7 @@ export default {
       fontFamily: {
         title: ["Altere", "sans-serif"],
         body: ["Mazzard", "sans-serif"],
-        persian: ["Peyda", "sans-serif"],
+        persian: ["Persian Font", "sans-serif"],
       },
       keyframes: {
         pingSlow: {

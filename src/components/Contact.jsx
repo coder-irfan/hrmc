@@ -48,7 +48,7 @@ function Contact({ getDirection }) {
         <div className="space-y-10 sm:space-y-10 md:space-y-12 lg:space-y-14">
           <div className="text-center space-y-2 md:space-y-3">
             <div
-              className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-blueColorDark`}
+              className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-primaryColorDark`}
             >
               <p className="mx-4 font-medium md:text-lg lg:text-xl">
                 {t("contactSection")}
@@ -57,7 +57,7 @@ function Contact({ getDirection }) {
 
             <h2 className="text-h2 font-semibold leading-tight">
               {t("contactTitle")}{" "}
-              <span className="text-colors-blueColorDark">
+              <span className="text-colors-primaryColorDark">
                 {t("contactHighlight")}
               </span>{" "}
               {t("contactTitleEnd")}
@@ -81,7 +81,7 @@ function Contact({ getDirection }) {
                 </div>
                 <div className="flex flex-col gap-6 lg:gap-8">
                   <div className="flex items-center gap-3">
-                    <p className="p-2 md:p-4 bg-colors-blueColorDark/70 rounded-full">
+                    <p className="p-2 md:p-4 bg-colors-primaryColorDark/70 rounded-full">
                       <Phone className="w-4 h-4 md:w-5 md:h-5 text-colors-textLightColor" />
                     </p>
                     <div className="">
@@ -95,7 +95,7 @@ function Contact({ getDirection }) {
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <p className="p-2 md:p-4 bg-colors-blueColorDark/70 rounded-full">
+                    <p className="p-2 md:p-4 bg-colors-primaryColorDark/70 rounded-full">
                       <LocationEdit className="w-4 h-4 md:w-5 md:h-5 text-colors-textLightColor" />
                     </p>
                     <div className="">
@@ -106,7 +106,7 @@ function Contact({ getDirection }) {
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <p className="p-2 md:p-4 bg-colors-blueColorDark/70 rounded-full">
+                    <p className="p-2 md:p-4 bg-colors-primaryColorDark/70 rounded-full">
                       <MailIcon className="w-4 h-4 md:w-5 md:h-5 text-colors-textLightColor" />
                     </p>
                     <div className="">

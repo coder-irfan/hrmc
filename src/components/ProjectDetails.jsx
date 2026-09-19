@@ -57,7 +57,7 @@ function ProjectDetails({ getDirection }) {
     return (
       <div className="min-h-[60vh] flex items-center justify-center bg-colors-bg">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-10 h-10 border-4 border-colors-blueColorDark border-t-transparent rounded-full animate-spin" />
+          <div className="w-10 h-10 border-4 border-colors-primaryColorDark border-t-transparent rounded-full animate-spin" />
           <p className="text-colors-textDarkGray font-medium text-sm">
             {t("loadingProjects")}
           </p>
@@ -116,10 +116,10 @@ function ProjectDetails({ getDirection }) {
         {/* 2-Column Details Layout */}
         <div className="grid grid-cols-1 items-start lg:grid-cols-12 gap-4 lg:gap-6">
           {/* Main Content Column */}
-          <div className="lg:col-span-7 space-y-10 bg-colors-blueColorDark/5 rounded-lg lg:rounded-2xl p-3 md:p-6">
+          <div className="lg:col-span-7 space-y-10 bg-colors-primaryColorDark/5 rounded-lg lg:rounded-2xl p-3 md:p-6">
             {project.image && (
               <div className="space-y-2">
-                <div className="relative group rounded-lg lg:rounded-xl overflow-hidden bg-colors-blueColorDark/5 shadow-2xl border border-colors-textDarkGray/10 w-full h-[300px] md:h-[380px] lg:h-[450px]">
+                <div className="relative group rounded-lg lg:rounded-xl overflow-hidden bg-colors-primaryColorDark/5 shadow-2xl border border-colors-textDarkGray/10 w-full h-[300px] md:h-[380px] lg:h-[450px]">
                   <img
                     src={urlFor(project.image)
                       .width(1600)
@@ -158,7 +158,7 @@ function ProjectDetails({ getDirection }) {
                             key={idx}
                             whileHover={{ scale: 1.02 }}
                             onClick={() => setLightboxIndex(imageGlobalIndex)}
-                            className="relative group cursor-pointer w-full h-16 md:h-28 rounded-md lg:rounded-lg overflow-hidden bg-colors-blueColorDark/5 shadow-md"
+                            className="relative group cursor-pointer w-full h-16 md:h-28 rounded-md lg:rounded-lg overflow-hidden bg-colors-primaryColorDark/5 shadow-md"
                           >
                             <img
                               src={imgUrl}
@@ -194,7 +194,7 @@ function ProjectDetails({ getDirection }) {
           <div className="lg:col-span-5">
             <div className="sticky top-28 space-y-6">
               {/* Meta Stats Card */}
-              <div className="bg-colors-blueColorDark/5 rounded-lg lg:rounded-2xl p-3 lg:p-6 space-y-4">
+              <div className="bg-colors-primaryColorDark/5 rounded-lg lg:rounded-2xl p-3 lg:p-6 space-y-4">
                 <h3 className="text-h4 font-bold text-colors-textDarkColor border-b border-colors-textDarkGray/15 pb-3">
                   {t("projectDetails")}
                 </h3>
@@ -202,7 +202,7 @@ function ProjectDetails({ getDirection }) {
                 <div className="space-y-4 text-xs md:text-sm">
                   {/* Date */}
                   <div className="flex items-center gap-3 border-b border-colors-textDarkGray/10 pb-3">
-                    <div className="p-2.5 bg-colors-blueColorDark/10 text-colors-blueColorDark rounded-xl">
+                    <div className="p-2.5 bg-colors-primaryColorDark/10 text-colors-primaryColorDark rounded-xl">
                       <Calendar className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
@@ -220,7 +220,7 @@ function ProjectDetails({ getDirection }) {
 
                   {/* Status */}
                   <div className="flex items-center gap-3 border-b border-colors-textDarkGray/10 pb-3">
-                    <div className="p-2.5 bg-colors-blueColorDark/10 text-colors-blueColorDark rounded-xl">
+                    <div className="p-2.5 bg-colors-primaryColorDark/10 text-colors-primaryColorDark rounded-xl">
                       <FolderCheck className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
@@ -235,7 +235,7 @@ function ProjectDetails({ getDirection }) {
 
                   {/* Quality Standard Badge */}
                   <div className="flex items-center gap-3 border-b border-colors-textDarkGray/10 pb-3">
-                    <div className="p-2.5 bg-colors-blueColorDark/10 text-colors-blueColorDark rounded-xl">
+                    <div className="p-2.5 bg-colors-primaryColorDark/10 text-colors-primaryColorDark rounded-xl">
                       <ShieldCheck className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">

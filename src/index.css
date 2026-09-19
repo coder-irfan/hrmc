@@ -57,43 +57,43 @@
 }
 
 /* ==========================================
-   3. Peyda (Persian Titles & Body)
+   3. Dana (Persian Titles & Body)
    ========================================== */
 @font-face {
-  font-family: "Peyda";
-  src: url("./assets/fonts/Peyda-Regular.woff2") format("woff2");
+  font-family: "Persian-Font";
+  src: url("./assets/fonts/Persian-Font-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Peyda";
-  src: url("./assets/fonts/Peyda-Medium.woff2") format("woff2");
+  font-family: "Persian-Font";
+  src: url("./assets/fonts/Persian-Font-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Peyda";
-  src: url("./assets/fonts/Peyda-SemiBold.woff2") format("woff2");
+  font-family: "Persian-Font";
+  src: url("./assets/fonts/Persian-Font-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Peyda";
-  src: url("./assets/fonts/Peyda-Bold.woff2") format("woff2");
+  font-family: "Persian-Font";
+  src: url("./assets/fonts/Persian-Font-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Peyda";
-  src: url("./assets/fonts/Peyda-Black.woff2") format("woff2");
+  font-family: "Persian-Font";
+  src: url("./assets/fonts/Persian-Font-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -157,12 +157,12 @@ html[lang="en"] .text-h4 {
 }
 
 /* ------------------------------------------
-   Persian / Dari Language Overrides (Peyda)
+   Persian / Dari Language Overrides (Persian-Font)
    ------------------------------------------ */
 
 /* Body text when document language is Persian  */
 html[lang="fa"] body {
-  font-family: "Peyda", sans-serif;
+  font-family: "Persian-Font", sans-serif;
 }
 
 /* All headings when document language is Persian */
@@ -172,7 +172,7 @@ html[lang="fa"] h3,
 html[lang="fa"] h4,
 html[lang="fa"] h5,
 html[lang="fa"] h6 {
-  font-family: "Peyda", sans-serif !important;
+  font-family: "Persian-Font", sans-serif !important;
 }
 
 html[lang="fa"] h1 {
@@ -232,7 +232,7 @@ html[lang="fa"] h1 {
 }
 
 .media-link {
-  @apply p-2 md:p-2.5 border-2 border-colors-blueColorDark hover:bg-colors-blueColorDark hover:text-colors-textLightColor rounded-full transition-all duration-300;
+  @apply p-2 md:p-2.5 border-2 border-colors-primaryColorDark hover:bg-colors-primaryColorDark hover:text-colors-textLightColor rounded-full transition-all duration-300;
 }
 
 .error {

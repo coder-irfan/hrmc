@@ -14,7 +14,7 @@ const Breadcrumb = () => {
   const breadcrumbSegments = pathnames.filter((segment) => segment !== lang);
 
   return (
-    <section className="bg-colors-blueColorLightesh relative w-full min-h-[150px] lg:min-h-[250px] flex items-center justify-center pt-20 pb-14 lg:pt-24 lg:pb-14 textLightColor overflow-hidden">
+    <section className="bg-colors-primaryColorLightesh relative w-full min-h-[150px] lg:min-h-[250px] flex items-center justify-center pt-20 pb-14 lg:pt-24 lg:pb-14 textLightColor overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-0" />
 
       <img

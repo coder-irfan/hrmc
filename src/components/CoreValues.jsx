@@ -32,7 +32,7 @@ function CoreValues({ getDirection }) {
           <div
             className={`inline-block tracking-wider ${
               isRTL ? "border-r-4" : "border-l-4"
-            } border-colors-blueColorDarkesh`}
+            } border-colors-primaryColorDarkesh`}
           >
             <span className="mx-4 font-medium md:text-lg lg:text-xl">
               {t("coreValuesSubtitle")}
@@ -41,7 +41,7 @@ function CoreValues({ getDirection }) {
 
           <h2 className="text-h2 font-bold">
             {t("coreValuesTitle")}{" "}
-            <span className="text-colors-blueColorDark">
+            <span className="text-colors-primaryColorDark">
               {t("coreValuesHighlight")}
             </span>
           </h2>
@@ -62,12 +62,11 @@ function CoreValues({ getDirection }) {
               <div
                 key={value.id}
                 className={`p-6 text-center flex flex-col items-center justify-center gap-4 lg:gap-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-lg border border-colors-thirdBg/30 ${
-                  isEven ? "bg-colors-bg" : "bg-colors-blueColorDark/15"
+                  isEven ? "bg-colors-bg" : "bg-colors-primaryColorDark/15"
                 }`}
               >
                 <div className="p-3 rounded-full bg-colors-bg shadow-md">
-                  <Icon className="text-3xl lg:text-4xl text-colors-blueColorDark"
-                     />
+                  <Icon className="text-3xl lg:text-4xl text-colors-primaryColorDark" />
                 </div>
 
                 <div className="space-y-2">

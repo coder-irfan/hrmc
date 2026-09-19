@@ -253,11 +253,11 @@ function Header() {
 
                 {isOpen && (
                   <div
-                    className="absolute top-5 right-5 sm:right-6 text-[1.4rem] md:hidden border border-colors-blueColorDark rounded-md p-1"
+                    className="absolute top-5 right-5 sm:right-6 text-[1.4rem] md:hidden border border-colors-primaryColorDark rounded-md p-1"
                     onClick={() => setIsOpen(false)}
                   >
                     <FaTimes
-                      className="cursor-pointer text-colors-blueColorDark"
+                      className="cursor-pointer text-colors-primaryColorDark"
                       aria-label="Close menu"
                     />
                   </div>
@@ -293,7 +293,7 @@ function Header() {
                     <ul className="">
                       {languages.map((lang) => (
                         <li
-                          className="px-3 py-2 hover:bg-colors-blueColorDark hover:text-colors-textLightColor hover:rounded-md cursor-pointer flex items-center gap-3 transition-all duration-200"
+                          className="px-3 py-2 hover:bg-colors-primaryColorDark hover:text-colors-textLightColor hover:rounded-md cursor-pointer flex items-center gap-3 transition-all duration-200"
                           key={lang.code}
                           onClick={() => {
                             i18n.changeLanguage(lang.code);
@@ -334,12 +334,12 @@ function Header() {
 
             {!isOpen && (
               <div
-                className={`absolute top-4 right-5 sm:right-6 text-[1rem] md:hidden border rounded-md p-1 ${isScrolled ? "border-colors-blueColorDark" : "border-colors-textLightColor"}`}
+                className={`absolute top-4 right-5 sm:right-6 text-[1rem] md:hidden border rounded-md p-1 ${isScrolled ? "border-colors-primaryColorDark" : "border-colors-textLightColor"}`}
                 onClick={() => setIsOpen(true)}
               >
                 <FaBars
                   aria-label="Open menu"
-                  className={`cursor-pointer ${isScrolled ? "text-colors-blueColorDark" : "text-colors-textLightColor"}`}
+                  className={`cursor-pointer ${isScrolled ? "text-colors-primaryColorDark" : "text-colors-textLightColor"}`}
                 />
               </div>
             )}

@@ -47,12 +47,12 @@ function FAQ({ getDirection }) {
         dir={getDirection()}
         className="relative px-4 sm:px-6 md:px-8 lg:px-16 py-14 md:py-14 lg:py-24 scroll-mt-20"
       >
-        <div className="absolute top-10 left-0 lg:left-[-4rem] bg-colors-blueColorLightesh/30 w-28 h-28 lg:w-52 lg:h-52 blur-[100px] rounded-full -z-10"></div>
-        <div className="absolute bottom-10 right-0 lg:right-[-4rem] bg-colors-blueColorLightesh/30 w-28 h-28 lg:w-52 lg:h-52 blur-[100px] rounded-full -z-10"></div>
+        <div className="absolute top-10 left-0 lg:left-[-4rem] bg-colors-primaryColorLightesh/30 w-28 h-28 lg:w-52 lg:h-52 blur-[100px] rounded-full -z-10"></div>
+        <div className="absolute bottom-10 right-0 lg:right-[-4rem] bg-colors-primaryColorLightesh/30 w-28 h-28 lg:w-52 lg:h-52 blur-[100px] rounded-full -z-10"></div>
 
         <div className="flex flex-col items-center text-center justify-center gap-2">
           <div
-            className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-blueColorDarkesh`}
+            className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-primaryColorDarkesh`}
           >
             <p className="mx-4 font-medium md:text-lg lg:text-xl">
               {t("faqSubtitle")}
@@ -60,7 +60,7 @@ function FAQ({ getDirection }) {
           </div>
           <h2 className="text-h2 font-bold">
             {t("faqTitle")}
-            <span className="text-colors-blueColorDark">
+            <span className="text-colors-primaryColorDark">
               {" "}
               {t("faqHighlight")}
             </span>
@@ -76,7 +76,7 @@ function FAQ({ getDirection }) {
               <div
                 key={faq.id}
                 onClick={() => toggleFaq(index)}
-                className="group relative max-w-4xl mx-auto cursor-pointer rounded-xl border border-colors-thirdBg/40 bg-colors-bg/70 backdrop-blur-md transition-all duration-300 hover:border-colors-blueColorDark/40 hover:shadow-lg"
+                className="group relative max-w-4xl mx-auto cursor-pointer rounded-xl border border-colors-thirdBg/40 bg-colors-bg/70 backdrop-blur-md transition-all duration-300 hover:border-colors-primaryColorDark/40 hover:shadow-lg"
               >
                 <div className="p-3 md:p-4 lg:p-5">
                   <div className="flex items-start gap-4">
@@ -84,7 +84,7 @@ function FAQ({ getDirection }) {
                       initial={false}
                       animate={{ rotate: isOpened ? 180 : 0 }}
                       transition={{ duration: 0.25 }}
-                      className={`mt-1 text-colors-blueColorDark rounded-lg transition-colors duration-300`}
+                      className={`mt-1 text-colors-primaryColorDark rounded-lg transition-colors duration-300`}
                     >
                       {isOpened ? <FaTimes /> : <FaPlus />}
                     </motion.div>
@@ -104,7 +104,7 @@ function FAQ({ getDirection }) {
                         className="overflow-hidden"
                       >
                         <p
-                          className={`pt-4 text-[13px] md:text-base text-colors-textDarkGray leading-relaxed ${isRTL ? "border-r-2 mr-2 pr-4" : "border-l-2 ml-2 pl-4"} border-colors-blueColorDark/20`}
+                          className={`pt-4 text-[13px] md:text-base text-colors-textDarkGray leading-relaxed ${isRTL ? "border-r-2 mr-2 pr-4" : "border-l-2 ml-2 pl-4"} border-colors-primaryColorDark/20`}
                         >
                           {faq.answer}
                         </p>

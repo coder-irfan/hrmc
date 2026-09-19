@@ -77,7 +77,7 @@ function Testimonial({ getDirection }) {
         <div className="space-y-6 lg:space-y-12">
           <div className="text-center space-y-2">
             <div
-              className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-blueColorDarkesh`}
+              className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-primaryColorDarkesh`}
             >
               <p className="mx-4 font-medium md:text-lg lg:text-xl">
                 {t("testimonialLabel")}
@@ -85,7 +85,7 @@ function Testimonial({ getDirection }) {
             </div>
             <h2 className="text-h2 font-semibold">
               {t("testimonialTitle1")}
-              <span className="text-colors-blueColorDark">
+              <span className="text-colors-primaryColorDark">
                 {t("testimonialHighlight")}
               </span>
             </h2>

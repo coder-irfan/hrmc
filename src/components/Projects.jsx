@@ -63,7 +63,7 @@ function DoneProjects({ getDirection, limit }) {
         <div
           className={`inline-block tracking-wider ${
             isRTL ? "border-r-4" : "border-l-4"
-          } border-colors-blueColorDarkesh`}
+          } border-colors-primaryColorDarkesh`}
         >
           <p className="mx-4 font-medium md:text-lg lg:text-xl text-colors-textDarkColor">
             {t("projectsSection")}
@@ -72,7 +72,7 @@ function DoneProjects({ getDirection, limit }) {
 
         <h2 className="text-h2 font-semibold leading-tight text-colors-textDarkColor">
           {t("projectsTitle")}{" "}
-          <span className="text-colors-blueColorDark">
+          <span className="text-colors-primaryColorDark">
             {t("projectsHighlight")}
           </span>
         </h2>
@@ -86,7 +86,7 @@ function DoneProjects({ getDirection, limit }) {
       {loading ? (
         <div className="min-h-[20vh] flex items-center justify-center bg-colors-bg">
           <div className="flex flex-col items-center gap-3">
-            <div className="w-10 h-10 border-4 border-colors-blueColorDark border-t-transparent rounded-full animate-spin" />
+            <div className="w-10 h-10 border-4 border-colors-primaryColorDark border-t-transparent rounded-full animate-spin" />
             <p className="text-colors-textDarkGray font-medium text-sm">
               {t("loadingProjects")}
             </p>
@@ -140,7 +140,7 @@ function DoneProjects({ getDirection, limit }) {
 
                   <div className="p-6 space-y-3">
                     <Link to={`/${currentLang}/projects/${projectSlug}`}>
-                      <h3 className="text-h3 font-semibold text-colors-textDarkColor group-hover:text-colors-blueColorDark transition-colors">
+                      <h3 className="text-h3 font-semibold text-colors-textDarkColor group-hover:text-colors-primaryColorDark transition-colors">
                         {projectTitle}
                       </h3>
                     </Link>

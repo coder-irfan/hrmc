@@ -22,7 +22,7 @@ function NewsLetter() {
   return (
     <>
       <section className="px-4 py-10 sm:px-6 md:py-12 md:px-8 lg:py-16 xl:py-16 lg:px-16">
-        <div className="bg-colors-blueColorVeryDark px-4 py-6 lg:py-10 xl:py-16 rounded-lg relative overflow-hidden">
+        <div className="bg-colors-primaryColorVeryDark px-4 py-6 lg:py-10 xl:py-16 rounded-lg relative overflow-hidden">
           <img
             src="/images/line1.webp"
             alt="line"

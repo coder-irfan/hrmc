@@ -38,7 +38,7 @@ function AboutDetails({ getDirection }) {
             className="absolute z-20 bottom-3 lg:bottom-6 start-3 sm:-start-6 
             bg-white p-3 sm:p-6 rounded-md lg:rounded-lg shadow-xl flex items-center gap-2 md:gap-4 max-w-[240px]"
           >
-            <div className="p-2 md:p-3 bg-colors-blueColorDark/10 text-colors-blueColorDark rounded-md lg:rounded-xl">
+            <div className="p-2 md:p-3 bg-colors-primaryColorDark/10 text-colors-primaryColorDark rounded-md lg:rounded-xl">
               <LucideAward className="w-5 h-5 lg:w-8 lg:h-8" />
             </div>
             <div>
@@ -58,7 +58,7 @@ function AboutDetails({ getDirection }) {
         >
           {/* Tag & Subtitle */}
           <div
-            className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-blueColorDarkesh`}
+            className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-primaryColorDarkesh`}
           >
             <p className="mx-4 font-medium md:text-lg lg:text-xl">
               {t("aboutDetailTag")}
@@ -82,9 +82,9 @@ function AboutDetails({ getDirection }) {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-3 bg-colors-blueColorLightesh/10 p-3.5 rounded-md lg:rounded-lg"
+                className="flex items-center gap-3 bg-colors-primaryColorLightesh/10 p-3.5 rounded-md lg:rounded-lg"
               >
-                <LucideCheckCircle2 className="w-5 h-5 text-colors-blueColorDark shrink-0" />
+                <LucideCheckCircle2 className="w-5 h-5 text-colors-primaryColorDark shrink-0" />
                 <span className="text-sm lg:text-md font-semibold text-colors-textDarkGray">
                   {feature}
                 </span>

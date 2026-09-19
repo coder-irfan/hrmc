@@ -28,7 +28,7 @@ function About({ getDirection }) {
           >
             <div className="space-y-2">
               <div
-                className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-blueColorDarkesh`}
+                className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-primaryColorDarkesh`}
               >
                 <p className="mx-4 font-medium md:text-lg lg:text-xl">
                   {t("aboutTag")}
@@ -37,7 +37,7 @@ function About({ getDirection }) {
 
               <h2 className="font-bold  text-h2 md:leading-[1.3]">
                 {t("aboutTitle")}
-                <span className="text-colors-blueColorDark">
+                <span className="text-colors-primaryColorDark">
                   {" "}
                   {t("aboutName")}
                 </span>
