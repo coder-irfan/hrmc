@@ -114,8 +114,8 @@ html {
 body {
   font-family: "Mazzard", sans-serif;
   overflow-x: hidden;
-  background-color: #f7f7f7;
-  color: #131314;
+  background-color: #ececec;
+  color: #101011;
   max-width: 100rem;
   margin-inline: auto;
   scroll-margin-top: 100rem;
@@ -184,7 +184,7 @@ html[lang="fa"] h1 {
 }
 
 .active-nav-link {
-  @apply text-colors-primaryColorDark font-bold;
+  @apply text-colors-primaryColorDark;
 }
 
 .button {

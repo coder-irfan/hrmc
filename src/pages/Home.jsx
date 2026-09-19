@@ -18,10 +18,7 @@ const NewsLetter = lazy(() => import("../components/NewsLetter"));
 const Home = ({ getDirection }) => (
   <>
     {/* Hero Section */}
-    <div className="bg-hero-bg bg-cover bg-no-repeat bg-center relative">
-      <Hero getDirection={getDirection} />
-      <div className="absolute inset-0 bg-colors-textDarkColor/70 lg:bg-colors-textDarkColor/75 pointer-events-none" />
-    </div>
+    <Hero getDirection={getDirection} />
 
     {/* About Section */}
     <About getDirection={getDirection} />

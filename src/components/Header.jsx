@@ -68,7 +68,7 @@ function Header() {
         </div>
 
         {/* CENTER / DESKTOP NAVIGATION LINKS */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-base lg:text-lg font-medium">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-base lg:text-lg font-semibold">
           {navLinks.map((link, index) => (
             <NavLink
               key={index}
@@ -210,10 +210,10 @@ function Header() {
                   end={link.end}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
-                    `block py-2 text-lg  ${
+                    `block py-2 text-lg font-semibold  ${
                       isActive
-                        ? "text-colors-primaryColor font-bold"
-                        : "text-colors-textDarkGray hover:text-colors-primaryColor font-medium"
+                        ? "text-colors-primaryColor"
+                        : "text-colors-textDarkGray hover:text-colors-primaryColor"
                     }`
                   }
                 >
