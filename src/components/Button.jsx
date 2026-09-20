@@ -13,7 +13,7 @@ function Button({
   ...props
 }) {
   const baseStyles =
-    "inline-flex items-center justify-center gap-3 rounded-lg font-body font-semibold text-description transition-all duration-300 ease-in-out active:scale-95 disabled:opacity-50 disabled:pointer-events-none";
+    "inline-flex items-center justify-center gap-2 rounded-lg font-body font-semibold text-description transition-all duration-300 ease-in-out active:scale-95 disabled:opacity-50 disabled:pointer-events-none";
 
   // Padding & Sizing variants
   const sizeStyles = "px-3.5 py-2 sm:px-5 sm:py-2.5";
@@ -38,7 +38,8 @@ function Button({
   };
 
   // Combine classes dynamically
-  const buttonClasses = `${baseStyles} ${sizeStyles} ${variants[variant] || variants.primary} ${className}`;
+  const skipSize = ["ghost"].includes(variant);
+  const buttonClasses = `${baseStyles} ${skipSize ? "" : sizeStyles} ${variants[variant] || variants.primary} ${className}`;
 
   // Content Structure
   const content = (
@@ -47,7 +48,9 @@ function Button({
 
       {/* Render Icon if provided (Variant 3 ignores icon automatically if not passed) */}
       {Icon && (
-        <span className="flex items-center justify-center transition-colors text-colors-textLightColor">
+        <span
+          className={`flex items-center justify-center transition-colors ${variant !== "ghost" ? "text-colors-textLightColor" : "text-colors-primaryColor"}`}
+        >
           <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
         </span>
       )}

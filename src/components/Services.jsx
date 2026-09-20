@@ -87,7 +87,7 @@ export default function Services({ getDirection }) {
   return (
     <section
       dir={getDirection()}
-      className="pt-6 pb-12 lg:pt-10 lg:pb-20 px-4 sm:px-6 xl:px-24"
+      className="pt-12 pb-20 lg:pt-20 lg:pb-24 px-4 sm:px-6 xl:px-24 bg-colors-primary-50"
     >
       <div className="mx-auto space-y-6 lg:space-y-10">
         {/* Page Title & Header */}

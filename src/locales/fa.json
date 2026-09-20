@@ -21,6 +21,12 @@
   "noServices": "در حال حاضر هیچ خدماتی موجود نیست.",
   "allServicesTitle": "خدمات طبی و صحی ما",
 
+  "homeBlogsTitle": "جدیدترین مقالات و اخبار",
+  "noBlogs": "در حال حاضر هیچ مقاله‌ای موجود نیست.",
+  "readMore": "ادامه مطلب",
+
+  "allBlogsTitle": "تمام مقالات و اخبار",
+
   "serviceNotFound": "خدمت مورد نظر یافت نشد",
   "serviceNotFoundDesc": "خدمتی که به دنبال آن هستید وجود ندارد یا حذف شده است.",
   "viewAllServices": "مشاهده تمام خدمات",

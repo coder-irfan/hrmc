@@ -8,8 +8,9 @@ import Services from "../components/Services";
 import LoaderUI from "../components/Loader";
 
 // Lazy loaded heavy components below the fold
-const Divider2 = lazy(() => import("../components/Divider2"));
 const HomeServices = lazy(() => import("../components/HomeServices"));
+const HomeBlogs = lazy(() => import("../components/HomeBlogs"));
+const Divider2 = lazy(() => import("../components/Divider2"));
 const FAQ = lazy(() => import("../components/FAQ"));
 const Testimonial = lazy(() => import("../components/Testimonial"));
 const Projects = lazy(() => import("../components/Projects"));
@@ -22,6 +23,9 @@ const Home = ({ getDirection }) => (
     <Hero getDirection={getDirection} />
 
     <HomeServices getDirection={getDirection} />
+
+    {/* About Section */}
+    <HomeBlogs getDirection={getDirection} />
 
     {/* About Section */}
     <About getDirection={getDirection} />

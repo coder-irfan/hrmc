@@ -21,6 +21,12 @@
   "noServices": "په دې وخت کې هیڅ خدمات شتون نلري.",
   "allServicesTitle": "زموږ طبي خدمات",
 
+  "homeBlogsTitle": "وروستي مقالې او خبرونه",
+  "noBlogs": "په دې وخت کې هیڅ مقاله شتون نلري.",
+  "readMore": "نور لوستل",
+
+  "allBlogsTitle": " ټولې مقالې او خبرونه",
+
   "serviceNotFound": "غوښتول شوی خدمت ونه موندل شو",
   "serviceNotFoundDesc": "هغه خدمت چې تاسو یې په لټه کې یاست شتون نلري یا لرې شوی دی.",
   "viewAllServices": "د ټولو خدماتو لیدل",

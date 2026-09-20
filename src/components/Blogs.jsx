@@ -6,13 +6,12 @@ import {
   LucideArrowLeft,
   LucideCalendar,
 } from "lucide-react";
-import SectionHeading from "./SectionHeading";
-import CarouselWrapper from "./CarouselWrapper";
-import { getLatestBlogs } from "../sanity/blogQuery";
+import SectionHeading from "../components/SectionHeading";
+import { getAllBlogs } from "../sanity/allBlogQuery";
 import { urlFor } from "../sanityClient";
-import Button from "./Button";
+import Button from "../components/Button";
 
-export default function HomeBlogs({ getDirection }) {
+export default function Blogs({ getDirection }) {
   const { t } = useTranslation();
   const { lang = "en" } = useParams();
   const isRTL = getDirection ? getDirection() === "rtl" : false;
@@ -24,13 +23,13 @@ export default function HomeBlogs({ getDirection }) {
     let isMounted = true;
     const fetchBlogs = async () => {
       try {
-        const data = await getLatestBlogs();
+        const data = await getAllBlogs();
         if (isMounted) {
           setBlogs(data || []);
           setLoading(false);
         }
       } catch (error) {
-        console.error("Error fetching latest blogs from Sanity:", error);
+        console.error("Error fetching all blogs from Sanity:", error);
         if (isMounted) setLoading(false);
       }
     };
@@ -40,14 +39,6 @@ export default function HomeBlogs({ getDirection }) {
       isMounted = false;
     };
   }, []);
-
-  // Custom Swiper Breakpoints
-  // Shows 3 cards on desktop, and 1.25 slides on mobile (~1 and ~1/3 of the second card)
-  const blogCarouselBreakpoints = {
-    320: { slidesPerView: 1.25, spaceBetween: 10 },
-    640: { slidesPerView: 2, spaceBetween: 12 },
-    1024: { slidesPerView: 3, spaceBetween: 14 },
-  };
 
   // Helper to format publishedAt date based on language locale
   const formatDate = (dateString) => {
@@ -70,12 +61,12 @@ export default function HomeBlogs({ getDirection }) {
     >
       <div className="mx-auto space-y-6 lg:space-y-10">
         {/* Section Header */}
-        <SectionHeading title={t("homeBlogsTitle")} />
+        <SectionHeading title={t("allBlogsTitle")} />
 
-        {/* Loading Skeleton State */}
+        {/* Loading Skeleton Grid */}
         {loading ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[...Array(3)].map((_, i) => (
+            {[...Array(6)].map((_, i) => (
               <div
                 key={i}
                 className="h-[420px] rounded-xl bg-colors-textDarkGray/60 p-1.5 animate-pulse flex flex-col justify-between"
@@ -98,16 +89,9 @@ export default function HomeBlogs({ getDirection }) {
             </p>
           </div>
         ) : (
-          /* Swiper Carousel Instance */
-          <CarouselWrapper
-            items={blogs}
-            getDirection={getDirection}
-            breakpoints={blogCarouselBreakpoints}
-            autoplay={true}
-            autoplayDelay={4000}
-            showNavigation={true}
-            showPagination={true}
-            renderItem={(blog) => {
+          /* 3-Column Grid for All Blogs */
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {blogs.map((blog) => {
               const blogTitle = blog?.title?.[lang] || blog?.title?.en || "";
               const blogBody = blog?.body?.[lang] || blog?.body?.en || "";
               const imageUrl = blog?.mainImage
@@ -115,7 +99,10 @@ export default function HomeBlogs({ getDirection }) {
                 : "/images/blog-placeholder.jpg";
 
               return (
-                <div className="h-full bg-colors-bg rounded-xl p-2 sm:p-2.5 border border-colors-primary-100/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+                <div
+                  key={blog._id}
+                  className="h-full bg-colors-bg rounded-xl p-2 sm:p-2.5 border border-colors-primary-100/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                >
                   {/* Top Image */}
                   <div className="relative w-full h-48 sm:h-64 rounded-lg overflow-hidden bg-colors-primary-50">
                     <img
@@ -126,7 +113,7 @@ export default function HomeBlogs({ getDirection }) {
                   </div>
 
                   {/* Bottom Content Parent Div */}
-                  <div className="pt-3 pb-1.5 px-3 sm:pt-5 sm:px-5 sm:pb-3.5 flex flex-col justify-between flex-grow space-y-4 lg:space-y-6 text-start">
+                  <div className="pt-3 pb-1.5 px-2 sm:pt-5 sm:px-3 sm:pb-3.5 flex flex-col justify-between flex-grow space-y-4 lg:space-y-6 text-start">
                     {/* Title + 2 Line Description */}
                     <div className="space-y-2">
                       <h3 className="font-title text-h4 font-bold text-colors-textDarkColor line-clamp-1 leading-snug hover:text-colors-primary-500 transition-colors">
@@ -142,7 +129,7 @@ export default function HomeBlogs({ getDirection }) {
                       <Button
                         variant="ghost"
                         icon={isRTL ? LucideArrowLeft : LucideArrowRight}
-                        text={t("readMore")}
+                        text={t("readMore", "Read More")}
                         to={`/${lang}/blogs/${blog.slug}`}
                         className=""
                       />
@@ -155,8 +142,8 @@ export default function HomeBlogs({ getDirection }) {
                   </div>
                 </div>
               );
-            }}
-          />
+            })}
+          </div>
         )}
       </div>
     </section>
