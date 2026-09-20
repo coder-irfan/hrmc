@@ -6,7 +6,7 @@ const Projects = lazy(() => import("../components/Projects"));
 
 const ProjectsPage = ({ getDirection }) => (
   <>
-    <Breadcrumb />
+    <Breadcrumb getDirection={getDirection} />
     <Projects getDirection={getDirection} />
   </>
 );

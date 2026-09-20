@@ -8,7 +8,7 @@ const NewsLetter = lazy(() => import("../components/NewsLetter"));
 
 const ContactPage = ({ getDirection }) => (
   <>
-    <Breadcrumb />
+    <Breadcrumb getDirection={getDirection} />
     <div className="bg-contact-bg bg-contain bg-no-repeat bg-right-top bg-colors-secondBg">
       <Contact getDirection={getDirection} />
     </div>

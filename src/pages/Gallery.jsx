@@ -4,7 +4,7 @@ import AboutDetails from "../components/AboutDetails";
 
 const AboutPage = ({ getDirection }) => (
   <>
-    <Breadcrumb />
+    <Breadcrumb getDirection={getDirection} />
     <AboutDetails getDirection={getDirection} />
     <CoreValues getDirection={getDirection} />
   </>

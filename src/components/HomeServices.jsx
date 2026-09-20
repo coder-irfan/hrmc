@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { getAllServices } from "../sanity/allServicesQuery";
+import { getHomeServices } from "../sanity/servicesQuery";
 import { urlFor } from "../sanityClient";
 import SectionHeading from "./SectionHeading";
 
-export default function Services({ getDirection }) {
+function HomeServices({ getDirection }) {
   const { t } = useTranslation();
   const { lang = "en" } = useParams();
   const isRTL = getDirection() === "rtl";
@@ -18,13 +18,13 @@ export default function Services({ getDirection }) {
     let isMounted = true;
     const fetchServices = async () => {
       try {
-        const data = await getAllServices();
+        const data = await getHomeServices();
         if (isMounted) {
           setServices(data);
           setLoading(false);
         }
       } catch (error) {
-        console.error("Error fetching all services:", error);
+        console.error("Error fetching services from Sanity:", error);
         if (isMounted) setLoading(false);
       }
     };
@@ -35,63 +35,17 @@ export default function Services({ getDirection }) {
     };
   }, []);
 
-  // Utility function: Chunks the array into repeating groups of 7 (3 + 4 pattern)
-  const renderGridGroups = () => {
-    const chunks = [];
-    for (let i = 0; i < services.length; i += 7) {
-      chunks.push(services.slice(i, i + 7));
-    }
-
-    return chunks.map((group, groupIdx) => {
-      const topRow = group.slice(0, 3);
-      const bottomRow = group.slice(3, 7);
-
-      return (
-        <div key={groupIdx} className="space-y-2 md:space-y-4">
-          {/* Top Row: Max 3 Items */}
-          {topRow.length > 0 && (
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-4">
-              {topRow.map((service, index) => (
-                <div
-                  key={service._id}
-                  className={
-                    index === 2 && topRow.length === 3
-                      ? "col-span-2 sm:col-span-1"
-                      : "col-span-1"
-                  }
-                >
-                  <ServiceCard service={service} lang={lang} isRTL={isRTL} />
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* Bottom Row: Max 4 Items */}
-          {bottomRow.length > 0 && (
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
-              {bottomRow.map((service) => (
-                <ServiceCard
-                  key={service._id}
-                  service={service}
-                  lang={lang}
-                  isRTL={isRTL}
-                />
-              ))}
-            </div>
-          )}
-        </div>
-      );
-    });
-  };
+  // Split items into Top Row (3 items) and Bottom Row (4 items)
+  const topServices = services.slice(0, 3);
+  const bottomServices = services.slice(3, 7);
 
   return (
     <section
       dir={getDirection()}
-      className="pt-6 pb-12 lg:pt-10 lg:pb-20 px-4 sm:px-6 xl:px-24"
+      className="py-16 lg:py-28 px-4 sm:px-6 xl:px-24"
     >
       <div className="mx-auto space-y-6 lg:space-y-10">
-        {/* Page Title & Header */}
-        <SectionHeading title={t("allServicesTitle")} />
+        <SectionHeading title={t("homeServiceTitle")} />
 
         {/* Loading Skeleton */}
         {loading ? (
@@ -100,7 +54,7 @@ export default function Services({ getDirection }) {
               {[...Array(3)].map((_, i) => (
                 <div
                   key={i}
-                  className="h-44 md:h-64 rounded-xl bg-colors-secondBg animate-pulse"
+                  className="h-44 md:h-64 rounded-xl bg-colors-textLightGray/50 animate-pulse"
                 />
               ))}
             </div>
@@ -108,28 +62,53 @@ export default function Services({ getDirection }) {
               {[...Array(4)].map((_, i) => (
                 <div
                   key={i}
-                  className="h-44 md:h-64 rounded-xl bg-colors-secondBg animate-pulse"
+                  className="h-44 md:h-64 rounded-xl bg-colors-textLightGray/50 animate-pulse"
                 />
               ))}
             </div>
           </div>
         ) : services.length === 0 ? (
-          /* Empty State Message */
+          /* EMPTY STATE MESSAGE */
           <div className="text-center py-6 lg:py-12 bg-colors-primary-50 rounded-xl border border-dashed border-colors-primary-200">
             <p className="font-body text-description text-colors-textDarkGray">
               {t("noServices")}
             </p>
           </div>
         ) : (
-          /* Repeating Chunked Grid */
-          <div className="space-y-2 md:space-y-4">{renderGridGroups()}</div>
+          <div className="space-y-4">
+            {/* Top Row: 3 Grid Items */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-4">
+              {topServices.map((service, index) => (
+                <div
+                  key={service._id}
+                  className={
+                    index === 2 ? "col-span-2 sm:col-span-1" : "col-span-1"
+                  }
+                >
+                  <ServiceCard service={service} lang={lang} isRTL={isRTL} />
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom Row: 4 Grid Items */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
+              {bottomServices.map((service) => (
+                <ServiceCard
+                  key={service._id}
+                  service={service}
+                  lang={lang}
+                  isRTL={isRTL}
+                />
+              ))}
+            </div>
+          </div>
         )}
       </div>
     </section>
   );
 }
 
-// Reuseable Service Card Component
+// Single Service Card matching the design layout (Blurred bottom overlay + localized title)
 function ServiceCard({ service, lang, isRTL }) {
   const serviceTitle = service?.title?.[lang] || service?.title?.en || "";
   const imageUrl = service?.image
@@ -162,3 +141,5 @@ function ServiceCard({ service, lang, isRTL }) {
     </Link>
   );
 }
+
+export default HomeServices;

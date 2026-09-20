@@ -12,7 +12,7 @@ function Footer({ getDirection }) {
       <footer
         id="contact"
         dir={getDirection()}
-        className="pt-10 pb-6 md:pt-14 md:pb-4 lg:pt-14 lg:pb-6 xl:pt-16 space-y-4 md:space-y-6 lg:space-y-6"
+        className="pt-10 pb-6 md:pt-14 md:pb-4 lg:pt-14 lg:pb-6 xl:pt-16 space-y-4 md:space-y-6 lg:space-y-6 bg-colors-bg"
       >
         <div className="px-4 sm:px-6 md:px-8 lg:px-16 flex flex-col lg:flex-row justify-center lg:justify-between gap-8 lg:gap-10 pb-8">
           <div className="space-y-5 lg:space-y-5 max-w-md lg:max-w-xs flex flex-col items-start justify-start ">

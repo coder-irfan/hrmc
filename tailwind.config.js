@@ -89,9 +89,6 @@ export default {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-8px)" },
         },
-        shimmerEffect: {
-          "100%": { transform: "translateX(100%)" },
-        },
         pulseRed: {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.4" },
@@ -101,7 +98,6 @@ export default {
         "ping-slow": "pingSlow 3s linear infinite",
         "ping-slower": "pingSlower 4s linear infinite",
         floatBouncing: "float 4s ease-in-out infinite",
-        shimmerEffect: "shimmer 1.8s infinite",
         "pulse-red": "pulseRed 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },

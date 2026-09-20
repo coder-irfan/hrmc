@@ -17,6 +17,14 @@
     "book_appointment": "Book Appointment"
   },
 
+  "homeServiceTitle": "Comprehensive Medical Services",
+  "noServices": "No services available at the moment.",
+  "allServicesTitle": "Our Medical Services",
+
+  "serviceNotFound": "Service Not Found",
+  "serviceNotFoundDesc": "The service you are looking for does not exist or has been removed.",
+  "viewAllServices": "View All Services",
+
   "aboutTag": "Learn About Us",
   "aboutTitle": "Building Everything Best That You",
   "aboutName": "Needed",

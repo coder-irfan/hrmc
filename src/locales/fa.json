@@ -17,6 +17,14 @@
     "book_appointment": "رزرو نوبت"
   },
 
+  "homeServiceTitle": "خدمات جامع طبی و صحى",
+  "noServices": "در حال حاضر هیچ خدماتی موجود نیست.",
+  "allServicesTitle": "خدمات طبی و صحی ما",
+
+  "serviceNotFound": "خدمت مورد نظر یافت نشد",
+  "serviceNotFoundDesc": "خدمتی که به دنبال آن هستید وجود ندارد یا حذف شده است.",
+  "viewAllServices": "مشاهده تمام خدمات",
+
   "aboutTag": "درباره ما بیشتر بدانید",
   "aboutTitle": "ما بهترین‌ها را برای نیازهای شما",
   "aboutName": "می‌سازیم",
