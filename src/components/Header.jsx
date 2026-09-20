@@ -27,6 +27,7 @@ function Header() {
   const languages = [
     { code: "en", label: "English", countryCode: "US" },
     { code: "fa", label: "دری", countryCode: "AF" },
+    { code: "ps", label: "پشتو", countryCode: "AF" },
   ];
 
   const dropdownRef = useRef(null);
@@ -44,8 +45,8 @@ function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-gray-100 shadow-sm">
-      <div className="relative px-4 sm:px-6 lg:px-16 h-14 lg:h-20 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-gray-100 shadow-sm max-w-[100rem] mx-auto">
+      <div className="relative px-4 sm:px-6 xl:px-24 h-14 lg:h-20 flex items-center justify-between">
         {/* MOBILE CALL ICON (Left) */}
         <div className="md:hidden flex items-center">
           <a
@@ -102,7 +103,7 @@ function Header() {
         <div className="hidden xl:flex items-center gap-3">
           <a
             href="tel:+93799123456"
-            className="w-10 h-10 rounded-full bg-colors-primaryColor flex items-center justify-center text-colors-textLightColor hover:opacity-90 transition-opacity"
+            className="w-10 h-10 rounded-full bg-colors-secondaryColor flex items-center justify-center text-colors-textLightColor hover:opacity-90 transition-opacity"
             aria-label="Call Us"
           >
             <Phone className="w-5 h-5" />
@@ -120,7 +121,7 @@ function Header() {
           </div>
         </div>
 
-        <div className="flex items-center sm:gap-4 absolute start-16 sm:start-20 md:start-40 lg:start-48 bg-colors-primaryColor p-2 rounded-full">
+        <div className="flex items-center sm:gap-4 absolute start-16 md:start-36 xl:start-auto xl:end-[260px] bg-colors-primaryColor p-2 rounded-full">
           <div className="relative" ref={dropdownRef}>
             <button
               className="flex text-colors-textLightColor items-center gap-2 cursor-pointer uppercase"
@@ -180,7 +181,7 @@ function Header() {
 
       {/* Drawer */}
       <aside
-        className={`fixed top-0 right-0 h-full w-[70%] bg-white z-50 shadow-2xl transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-between ${
+        className={`fixed top-0 right-0 h-full w-[80%] bg-white z-50 shadow-2xl transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-between ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -229,7 +230,7 @@ function Header() {
           <div className="flex items-center gap-3">
             <a
               href="tel:+93799123456"
-              className="w-8 h-8 rounded-full bg-colors-primaryColor flex items-center justify-center text-white"
+              className="w-8 h-8 rounded-full bg-colors-secondaryColor flex items-center justify-center text-white"
             >
               <Phone className="w-4 h-4 fill-current" />
             </a>

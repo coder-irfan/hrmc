@@ -8,13 +8,14 @@
   "contact": "Contact",
   "callUs": "Call Us",
 
-  "heroTagline": "Construction & Engineering",
-  "heroTagline2": "Building Trust & Quality",
-  "heroTagline3": "Reliable Project Delivery",
-  "heroTitleHighlight": "Burj-e-Zamin",
-  "heroTitle": "Building Better Future",
-  "heroDescription": "Burj-e-Zamin Construction & Architecture Company is an innovative and committed company operating in the fields of architecture, construction, and project management in Afghanistan. With a professional team, technical expertise, and a modern approach, the company delivers residential, commercial, and infrastructure projects with high quality and engineering standards, aims to play an important role in the future growth of the country.",
-  "learnMore": "Learn More",
+  "hero": {
+    "title_part1": "Trusted Healthcare",
+    "title_highlight": "Center for You",
+    "description": "HRMC Hospital provides world-class medical treatments, advanced diagnostic services, and compassionate patient care with modern infrastructure.",
+    "badge_title": "Certified Facility",
+    "badge_subtitle": "High Quality Standards",
+    "book_appointment": "Book Appointment"
+  },
 
   "aboutTag": "Learn About Us",
   "aboutTitle": "Building Everything Best That You",

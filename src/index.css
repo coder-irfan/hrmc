@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -99,6 +101,38 @@
   font-display: swap;
 }
 
+:root,
+html[lang="en"] {
+  --font-title: "Lato", sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
+}
+
+/* Persian / Dari (fa): Headings -> Dana | Body -> Dana */
+html[lang="fa"] {
+  --font-title: "Persian-Font", sans-serif;
+  --font-body: "Persian-Font", sans-serif;
+}
+
+/* Pashto (ps): Headings -> Vazirmatn | Body -> Vazirmatn */
+html[lang="ps"] {
+  --font-title: "Vazirmatn", sans-serif;
+  --font-body: "Vazirmatn", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+}
+
+html[lang="fa"] h1,
+html[lang="ps"] h1 {
+  line-height: 1.3;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 100%;
@@ -112,71 +146,14 @@ html {
 }
 
 body {
-  font-family: "Mazzard", sans-serif;
+  font-family: var(--font-body);
   overflow-x: hidden;
-  background-color: #ececec;
+  background-color: #f8f7f7;
   color: #101011;
   max-width: 100rem;
   margin-inline: auto;
   scroll-margin-top: 100rem;
   scroll-behavior: smooth;
-}
-
-html[lang="en"] h1,
-html[lang="en"] h2,
-html[lang="en"] h3,
-html[lang="en"] h4,
-html[lang="en"] h5,
-html[lang="en"] h6 {
-  font-family: "Altere", sans-serif !important;
-  font-weight: 400 !important;
-  line-height: 1.15;
-}
-
-html[lang="en"] .text-h1 {
-  font-size: clamp(1.1rem, 0.7rem + 3.4vw, 2.4rem) !important;
-  line-height: 1.8;
-}
-
-html[lang="en"] .text-h2 {
-  font-size: clamp(1rem, 2.1vw, 1.8rem) !important;
-  line-height: 1.8;
-}
-
-html[lang="en"] .text-h2Typing {
-  font-size: clamp(0.6rem, 1.8vw, 0.9rem) !important;
-}
-
-html[lang="en"] .text-h3 {
-  font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
-}
-
-html[lang="en"] .text-h4 {
-  font-size: clamp(0.6rem, 1.4vw, 0.85rem) !important;
-  line-height: 1.8;
-}
-
-/* ------------------------------------------
-   Persian / Dari Language Overrides (Persian-Font)
-   ------------------------------------------ */
-
-/* Body text when document language is Persian  */
-html[lang="fa"] body {
-  font-family: "Persian-Font", sans-serif;
-}
-
-/* All headings when document language is Persian */
-html[lang="fa"] h1,
-html[lang="fa"] h2,
-html[lang="fa"] h3,
-html[lang="fa"] h4,
-html[lang="fa"] h5,
-html[lang="fa"] h6 {
-  font-family: "Persian-Font", sans-serif !important;
-}
-
-html[lang="fa"] h1 {
-  line-height: 1.5;
 }
 
 .nav-link {

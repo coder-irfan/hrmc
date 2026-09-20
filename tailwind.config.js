@@ -62,16 +62,17 @@ export default {
       },
       fontSize: {
         h1: "clamp(1.5rem, 0.9706rem + 4.7059vw, 3.3rem)",
-        h2Typing: "clamp(0.8rem, 2.5vw, 1.2rem)",
+        h1Second: "clamp(1rem, 0.9706rem + 4.7059vw, 3rem)",
         h2: "clamp(1.4rem, 3vw, 2.5rem)",
         h3: "clamp(1.1rem, 2vw, 1.3rem)",
         h4: "clamp(0.9rem, 2vw, 1.2rem)",
+        h5: "clamp(0.8rem, 2vw, 1rem)",
+        largeDescription: "clamp(0.9rem, 2vw, 1.3rem)",
         description: "clamp(0.9rem, 2vw, 1.1rem)",
       },
       fontFamily: {
-        title: ["Altere", "sans-serif"],
-        body: ["Mazzard", "sans-serif"],
-        persian: ["Persian Font", "sans-serif"],
+        title: ["var(--font-title)", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
       },
       keyframes: {
         pingSlow: {
