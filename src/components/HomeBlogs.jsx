@@ -66,7 +66,7 @@ export default function HomeBlogs({ getDirection }) {
   return (
     <section
       dir={getDirection ? getDirection() : "ltr"}
-      className="pt-12 pb-20 lg:pt-20 lg:pb-24 px-4 sm:px-6 xl:px-24 bg-colors-primary-50"
+      className="pt-12 pb-12 lg:pt-20 lg:pb-16 px-4 sm:px-6 xl:px-24 bg-colors-primary-50"
     >
       <div className="mx-auto space-y-6 lg:space-y-10">
         {/* Section Header */}
@@ -78,15 +78,17 @@ export default function HomeBlogs({ getDirection }) {
             {[...Array(3)].map((_, i) => (
               <div
                 key={i}
-                className="h-[420px] rounded-xl bg-colors-textLightGray/50 p-1.5 animate-pulse flex flex-col justify-between"
+                className={`h-96 lg:h-[420px] rounded-xl bg-colors-textLightGray/50 p-1.5 animate-pulse flex flex-col justify-between ${
+                  i > 0 ? "hidden sm:block" : ""
+                }`}
               >
-                <div className="w-full h-48 rounded-xl bg-colors-textLightGray/50" />
-                <div className="space-y-3 p-3">
+                <div className="w-full h-48 lg:h-64 rounded-xl bg-colors-textLightGray/50" />
+                <div className="space-y-2 lg:h-space-y-4 p-2 lg:h-p-3">
                   <div className="h-6 bg-colors-textLightGray/50 rounded w-3/4" />
                   <div className="h-4 bg-colors-textLightGray/50 rounded w-full" />
                   <div className="h-4 bg-colors-textLightGray/50 rounded w-2/3" />
                 </div>
-                <div className="h-10 bg-colors-textLightGray/50 rounded-lg m-3" />
+                <div className="h-8 lg:h-10 bg-colors-textLightGray/50 rounded-lg m-3" />
               </div>
             ))}
           </div>

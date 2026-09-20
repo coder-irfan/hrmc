@@ -49,16 +49,18 @@ function HomeServices({ getDirection }) {
 
         {/* Loading Skeleton */}
         {loading ? (
-          <div className="space-y-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="space-y-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-4">
               {[...Array(3)].map((_, i) => (
                 <div
                   key={i}
-                  className="h-44 md:h-64 rounded-xl bg-colors-textLightGray/50 animate-pulse"
+                  className={`h-44 md:h-64 rounded-xl bg-colors-textLightGray/50 animate-pulse ${
+                    i === 2 ? "col-span-2 sm:col-span-1" : ""
+                  }`}
                 />
               ))}
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
               {[...Array(4)].map((_, i) => (
                 <div
                   key={i}

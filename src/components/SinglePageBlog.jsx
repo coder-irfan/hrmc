@@ -77,7 +77,7 @@ export default function SinglePageBlog({ getDirection }) {
         {/* Loading Skeleton */}
         {loading ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
-            <div className="w-full h-52 sm:h-96 lg:h-[450px] rounded-xl bg-colors-textLightGray/50 animate-pulse order-2 lg:order-1" />
+            <div className="w-full h-52 sm:h-96 lg:h-[450px] rounded-xl bg-colors-textLightGray/50 animate-pulse lg:order-1" />
             <div className="space-y-4">
               <div className="h-8 md:h-12 w-3/4 bg-colors-textLightGray/50 rounded-lg animate-pulse" />
               <div className="h-4 w-1/3 bg-colors-textLightGray/50 rounded animate-pulse" />

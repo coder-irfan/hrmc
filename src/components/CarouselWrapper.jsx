@@ -127,7 +127,7 @@ export default function CarouselWrapper({
       {/* Custom Pagination Container */}
       {showPagination && items.length > 1 && (
         <div
-          className={`${pagElClass} absolute -bottom-10 inset-x-0 z-10 flex items-center justify-center gap-1.5 [&_.swiper-pagination-bullet]:w-2.5 [&_.swiper-pagination-bullet]:h-2.5 [&_.swiper-pagination-bullet]:bg-colors-primary-200 [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet]:duration-300 [&_.swiper-pagination-bullet]:cursor-pointer`}
+          className={`${pagElClass} relative mt-8 flex items-center justify-center gap-1.5 [&_.swiper-pagination-bullet]:w-2.5 [&_.swiper-pagination-bullet]:h-2.5 [&_.swiper-pagination-bullet]:bg-colors-primary-200 [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet]:duration-300 [&_.swiper-pagination-bullet]:cursor-pointer`}
         />
       )}
     </div>
