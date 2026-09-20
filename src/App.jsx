@@ -12,9 +12,10 @@ import Home from "./pages/Home";
 // Lazy-loaded Pages
 const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
-const Blog = lazy(() => import("./pages/Blog"));
-const Contact = lazy(() => import("./pages/Contact"));
 const SingleServicePage = lazy(() => import("./pages/ServiceDetails"));
+const Blog = lazy(() => import("./pages/Blog"));
+const SinglePageBlog = lazy(() => import("./pages/SingleBlog"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 // Sync Language and Direction
 const LanguageSync = () => {
@@ -77,7 +78,7 @@ function App() {
           <Route path="blog" element={<Blog getDirection={getDirection} />} />
           <Route
             path="blog/:slug"
-            element={<SingleServicePage getDirection={getDirection} />}
+            element={<SinglePageBlog getDirection={getDirection} />}
           />
           <Route
             path="contact"

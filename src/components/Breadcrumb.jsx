@@ -60,7 +60,7 @@ const Breadcrumb = ({ getDirection }) => {
     >
       <div className="w-full mx-auto flex items-center justify-start bg-colors-primary-700 py-4 sm:py-6 px-5 sm:px-6 md:px-8 rounded-xl justify-start">
         <nav aria-label="Breadcrumb">
-          <ol className="inline-flex items-center gap-1.5 sm:gap-2 text-h5 font-medium text-colors-textDarkGray">
+          <ol className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-h5 font-medium text-colors-textDarkGray">
             {/* Home Link */}
             <li className="inline-flex items-center">
               <Link
@@ -91,7 +91,7 @@ const Breadcrumb = ({ getDirection }) => {
                 >
                   <LucideChevronRight className="w-3.5 h-3.5 md:w-4 md:h-4 text-colors-textLightColor/40 rtl:rotate-180" />
                   {isLast ? (
-                    <span className="text-colors-textLightColor font-semibold truncate max-w-[200px] sm:max-w-xs capitalize">
+                    <span className="text-colors-textLightColor font-semibold capitalize break-words">
                       {displayLabel}
                     </span>
                   ) : (

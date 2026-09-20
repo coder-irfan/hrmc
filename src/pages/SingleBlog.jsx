@@ -1,13 +1,11 @@
-import CoreValues from "../components/CoreValues";
 import Breadcrumb from "../components/Breadcrumb";
-import AboutDetails from "../components/AboutDetails";
+import SinglePageBlog from "../components/SinglePageBlog";
 
-const AboutPage = ({ getDirection }) => (
+const SingleBlog = ({ getDirection }) => (
   <>
     <Breadcrumb getDirection={getDirection} />
-    <AboutDetails getDirection={getDirection} />
-    <CoreValues getDirection={getDirection} />
+    <SinglePageBlog getDirection={getDirection} />
   </>
 );
 
-export default AboutPage;
+export default SingleBlog;

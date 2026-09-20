@@ -27,6 +27,10 @@
 
   "allBlogsTitle": "تمام مقالات و اخبار",
 
+  "blogNotFound": "مقاله پیدا نشد",
+  "blogNotFoundDesc": "مقاله مورد نظر پیدا نشد یا ممکن است حذف شده باشد.",
+  "viewAllBlogs": "مشاهده تمام مقالات",
+
   "serviceNotFound": "خدمت مورد نظر یافت نشد",
   "serviceNotFoundDesc": "خدمتی که به دنبال آن هستید وجود ندارد یا حذف شده است.",
   "viewAllServices": "مشاهده تمام خدمات",

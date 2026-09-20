@@ -78,15 +78,15 @@ export default function HomeBlogs({ getDirection }) {
             {[...Array(3)].map((_, i) => (
               <div
                 key={i}
-                className="h-[420px] rounded-xl bg-colors-textDarkGray/60 p-1.5 animate-pulse flex flex-col justify-between"
+                className="h-[420px] rounded-xl bg-colors-textLightGray/50 p-1.5 animate-pulse flex flex-col justify-between"
               >
-                <div className="w-full h-48 rounded-xl bg-colors-textLightColor/30" />
+                <div className="w-full h-48 rounded-xl bg-colors-textLightGray/50" />
                 <div className="space-y-3 p-3">
-                  <div className="h-6 bg-colors-textLightColor/30 rounded w-3/4" />
-                  <div className="h-4 bg-colors-textLightColor/30 rounded w-full" />
-                  <div className="h-4 bg-colors-textLightColor/30 rounded w-2/3" />
+                  <div className="h-6 bg-colors-textLightGray/50 rounded w-3/4" />
+                  <div className="h-4 bg-colors-textLightGray/50 rounded w-full" />
+                  <div className="h-4 bg-colors-textLightGray/50 rounded w-2/3" />
                 </div>
-                <div className="h-10 bg-colors-textLightColor/30 rounded-lg m-3" />
+                <div className="h-10 bg-colors-textLightGray/50 rounded-lg m-3" />
               </div>
             ))}
           </div>
@@ -143,7 +143,7 @@ export default function HomeBlogs({ getDirection }) {
                         variant="ghost"
                         icon={isRTL ? LucideArrowLeft : LucideArrowRight}
                         text={t("readMore")}
-                        to={`/${lang}/blogs/${blog.slug}`}
+                        to={`/${lang}/blog/${blog.slug}`}
                         className=""
                       />
 

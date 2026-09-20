@@ -31,6 +31,10 @@
 
   "allBlogsTitle": "All Blogs & Articles",
 
+  "blogNotFound": "Article Not Found",
+  "blogNotFoundDesc": "The requested article could not be found or may have been removed.",
+  "viewAllBlogs": "View All Articles",
+
   "aboutTag": "Learn About Us",
   "aboutTitle": "Building Everything Best That You",
   "aboutName": "Needed",

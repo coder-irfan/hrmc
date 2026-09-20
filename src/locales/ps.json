@@ -27,6 +27,10 @@
 
   "allBlogsTitle": " ټولې مقالې او خبرونه",
 
+  "blogNotFound": "مقاله ونه موندل شوه",
+  "blogNotFoundDesc": "غوښتل شوې مقاله ونه موندل شوه یا ممکن لرې شوې وي.",
+  "viewAllBlogs": "ټولې مقالې وګورئ",
+
   "serviceNotFound": "غوښتول شوی خدمت ونه موندل شو",
   "serviceNotFoundDesc": "هغه خدمت چې تاسو یې په لټه کې یاست شتون نلري یا لرې شوی دی.",
   "viewAllServices": "د ټولو خدماتو لیدل",
