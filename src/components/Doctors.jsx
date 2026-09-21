@@ -44,11 +44,11 @@ export default function Doctors({ getDirection }) {
 
         {/* Loading Skeleton Grid */}
         {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 lg:gap-4">
             {[...Array(5)].map((_, i) => (
               <div
                 key={i}
-                className="w-full h-96 rounded-[200px] md:rounded-[120px] bg-colors-textLightGray/50 animate-pulse"
+                className="w-full h-60 sm:h-96 rounded-[200px] md:rounded-[120px] bg-colors-textLightGray/50 animate-pulse"
               />
             ))}
           </div>
@@ -64,7 +64,7 @@ export default function Doctors({ getDirection }) {
           </div>
         ) : (
           /* Responsive CSS Grid */
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 lg:gap-4">
             {doctors.map((doctor) => {
               const doctorName = doctor?.name || "";
               const specializationText =
@@ -78,7 +78,7 @@ export default function Doctors({ getDirection }) {
               return (
                 <div
                   key={doctor._id}
-                  className="relative w-full h-96 rounded-[200px] md:rounded-[120px] overflow-hidden border-2 border-colors-primary-200/50 shadow-sm hover:shadow-md transition-all duration-500"
+                  className="relative w-full h-60 sm:h-96 rounded-[200px] md:rounded-[120px] overflow-hidden border-2 border-colors-primary-200/50 shadow-sm hover:shadow-md transition-all duration-500"
                 >
                   {/* Doctor Full Photograph */}
                   <img
@@ -88,7 +88,7 @@ export default function Doctors({ getDirection }) {
                   />
 
                   {/* Dark Fade Gradient Overlay at the Bottom */}
-                  <div className="absolute inset-x-0 bottom-0 pt-28 pb-8 px-4 bg-gradient-to-t from-colors-primary-500/80 via-colors-primary-500/60 to-transparent text-center flex flex-col justify-end items-center space-y-1">
+                  <div className="absolute inset-x-0 bottom-0 pt-14 md:pt-28 pb-8 px-4 bg-gradient-to-t from-colors-primary-500/80 via-colors-primary-500/60 to-transparent text-center flex flex-col justify-end items-center space-y-1">
                     {/* Doctor Name */}
                     <h3 className="font-title text-h4 md:text-h5 font-bold text-colors-textLightColor leading-snug drop-shadow-sm">
                       {doctorName}
