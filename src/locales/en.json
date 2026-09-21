@@ -35,6 +35,11 @@
   "blogNotFoundDesc": "The requested article could not be found or may have been removed.",
   "viewAllBlogs": "View All Articles",
 
+  "homeDoctorsTitle": "Our Medical Specialists",
+  "noDoctors": "No doctors information available at the moment.",
+
+  "allDoctorsTitle": "Our Medical Team & Specialists",
+
   "aboutTag": "Learn About Us",
   "aboutTitle": "Building Everything Best That You",
   "aboutName": "Needed",

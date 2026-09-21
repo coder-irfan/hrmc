@@ -18,7 +18,7 @@ export default defineType({
       type: 'object',
       fields: [
         {name: 'en', title: 'English Specialization', type: 'string'},
-        {name: 'prs', title: 'Dari Specialization (دری)', type: 'string'},
+        {name: 'fa', title: 'Dari Specialization (دری)', type: 'string'},
         {name: 'ps', title: 'Pashto Specialization (پښتو)', type: 'string'},
       ],
       validation: (Rule) => Rule.required(),
