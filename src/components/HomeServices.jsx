@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { getHomeServices } from "../sanity/servicesQuery";
 import { urlFor } from "../sanityClient";
 import SectionHeading from "./SectionHeading";
@@ -111,7 +110,7 @@ function HomeServices({ getDirection }) {
 }
 
 // Single Service Card matching the design layout (Blurred bottom overlay + localized title)
-function ServiceCard({ service, lang, isRTL }) {
+function ServiceCard({ service, lang }) {
   const serviceTitle = service?.title?.[lang] || service?.title?.en || "";
   const imageUrl = service?.image
     ? urlFor(service.image).width(600).height(450).url()
@@ -130,15 +129,10 @@ function ServiceCard({ service, lang, isRTL }) {
       />
 
       {/* Frosted Glass Overlay on the Bottom with Title */}
-      <div className="absolute inset-x-0 bottom-0 p-2.5 md:p-3.5 bg-colors-primary-300/30 backdrop-blur-md border-t border-colors-bg/20 flex items-center justify-between gap-3 text-colors-textLightColor transition-all duration-300 group-hover:bg-colors-primary-600/50">
-        <h3 className="font-title text-h5 md:text-h4 font-semibold truncate leading-snug">
+      <div className="absolute inset-x-0 bottom-0 p-2 md:p-2 bg-colors-primary-300/30 backdrop-blur-sm border-t border-colors-bg/20 flex items-center justify-center text-colors-textLightColor transition-all duration-300 group-hover:bg-colors-primary-600/30">
+        <h3 className="font-title text-h4 md:text-h3 font-semibold truncate leading-snug">
           {serviceTitle}
         </h3>
-        <FaArrowUpRightFromSquare
-          className={`text-h5 shrink-0 transition-transform duration-400 group-hover:scale-105 ${
-            isRTL ? "-scale-x-100" : ""
-          }`}
-        />
       </div>
     </Link>
   );

@@ -40,6 +40,11 @@
 
   "allDoctorsTitle": "Our Medical Team & Specialists",
 
+  "beforeAfterTitle": "Before & After Transformations",
+  "noBeforeAfter": "No transformation cases available at the moment.",
+
+  "allBeforeAfterTitle": "Before & After Gallery",
+
   "aboutTag": "Learn About Us",
   "aboutTitle": "Building Everything Best That You",
   "aboutName": "Needed",

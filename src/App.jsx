@@ -16,6 +16,7 @@ const SingleServicePage = lazy(() => import("./pages/ServiceDetails"));
 const Blog = lazy(() => import("./pages/Blog"));
 const SinglePageBlog = lazy(() => import("./pages/SingleBlog"));
 const DoctorsPage = lazy(() => import("./pages/Doctors"));
+const GalleryPage = lazy(() => import("./pages/Gallery"));
 const Contact = lazy(() => import("./pages/Contact"));
 
 // Sync Language and Direction
@@ -84,6 +85,10 @@ function App() {
           <Route
             path="doctors"
             element={<DoctorsPage getDirection={getDirection} />}
+          />
+          <Route
+            path="gallery"
+            element={<GalleryPage getDirection={getDirection} />}
           />
           <Route
             path="contact"

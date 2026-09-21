@@ -84,7 +84,7 @@ export default function Doctors({ getDirection }) {
                   <img
                     src={imageUrl}
                     alt={doctorName}
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
 
                   {/* Dark Fade Gradient Overlay at the Bottom */}

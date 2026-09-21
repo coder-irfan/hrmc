@@ -40,6 +40,11 @@
   "serviceNotFoundDesc": "خدمتی که به دنبال آن هستید وجود ندارد یا حذف شده است.",
   "viewAllServices": "مشاهده تمام خدمات",
 
+  "beforeAfterTitle": "قبل و بعد درمان",
+  "noBeforeAfter": "در حال حاضر هیچ نمونه کار قبل و بعد موجود نیست.",
+
+  "allBeforeAfterTitle": "گالری قبل و بعد",
+
   "aboutTag": "درباره ما بیشتر بدانید",
   "aboutTitle": "ما بهترین‌ها را برای نیازهای شما",
   "aboutName": "می‌سازیم",

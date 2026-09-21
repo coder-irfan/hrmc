@@ -1,13 +1,11 @@
-import CoreValues from "../components/CoreValues";
 import Breadcrumb from "../components/Breadcrumb";
-import AboutDetails from "../components/AboutDetails";
+import BeforeAfter from "../components/BeforeAfter";
 
-const AboutPage = ({ getDirection }) => (
+const BeforeAfterGallery = ({ getDirection }) => (
   <>
     <Breadcrumb getDirection={getDirection} />
-    <AboutDetails getDirection={getDirection} />
-    <CoreValues getDirection={getDirection} />
+    <BeforeAfter getDirection={getDirection} />
   </>
 );
 
-export default AboutPage;
+export default BeforeAfterGallery;
