@@ -54,9 +54,9 @@ export default {
       },
       backgroundImage: {
         "hero-bg": "url('/images/hero-bg.webp')",
-        "divider-bg": "url('/images/page-header-bg.webp')",
+        "divider-bg": "url('/images/cta.webp')",
         "testimonial-bg": "url('/images/map-pattern.webp')",
-        "divider2-bg": "url('/images/divider.webp')",
+        "divider2-bg": "url('/images/cta2.webp')",
         "contact-bg": "url('/images/our-service-background.webp')",
         "footer-bg": "url('/images/footerbg.png')",
       },

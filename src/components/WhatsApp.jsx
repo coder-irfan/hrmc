@@ -43,7 +43,7 @@ function WhatsApp() {
         href="https://wa.me/93703660660?text=Hello%20I%20want%20more%20information%20about%20Burjezamin"
         target="_blank"
         rel="noopener noreferrer"
-        className="relative p-3 md:p-4 rounded-full shadow-lg text-white bg-[#25d366] hover:bg-[#20b456] transition-all duration-300 flex items-center justify-center"
+        className="relative p-3 md:p-4 rounded-full shadow-lg text-colors-textLightColor bg-[#25d366] hover:bg-[#20b456] transition-all duration-300 flex items-center justify-center"
       >
         <FaWhatsapp className="text-3xl" />
       </a>

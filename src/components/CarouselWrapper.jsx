@@ -101,7 +101,7 @@ export default function CarouselWrapper({
           {/* Previous Button (Start side) */}
           <button
             aria-label="Previous Slide"
-            className={`${prevElClass} absolute top-1/2 -translate-y-1/2 -start-2 lg:-start-5 z-20 w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-colors-bg/90 hover:bg-colors-primary-500 text-colors-textDarkColor hover:text-colors-textLightColor shadow-sm hover:shadow-md border border-colors-primary-100 flex items-center justify-center transition-all duration-300 transform disabled:opacity-30 disabled:cursor-not-allowed`}
+            className={`${prevElClass} absolute top-1/2 -translate-y-1/2 -start-4 lg:-start-6 z-20 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-colors-bg/90 hover:bg-colors-primary-500 text-colors-textDarkColor hover:text-colors-textLightColor shadow-sm hover:shadow-md border border-colors-primary-100 flex items-center justify-center transition-all duration-300 transform disabled:opacity-30 disabled:cursor-not-allowed`}
           >
             {isRTL ? (
               <LucideChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
@@ -113,7 +113,7 @@ export default function CarouselWrapper({
           {/* Next Button (End side) */}
           <button
             aria-label="Next Slide"
-            className={`${nextElClass} absolute top-1/2 -translate-y-1/2 -end-2 lg:-end-5 z-20 w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-colors-bg/90 hover:bg-colors-primary-500 text-colors-textDarkColor hover:text-colors-textLightColor shadow-sm hover:shadow-md border border-colors-primary-100 flex items-center justify-center transition-all duration-300 transform disabled:opacity-30 disabled:cursor-not-allowed`}
+            className={`${nextElClass} absolute top-1/2 -translate-y-1/2 -end-4 lg:-end-6 z-20 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-colors-bg/90 hover:bg-colors-primary-500 text-colors-textDarkColor hover:text-colors-textLightColor shadow-sm hover:shadow-md border border-colors-primary-100 flex items-center justify-center transition-all duration-300 transform disabled:opacity-30 disabled:cursor-not-allowed`}
           >
             {isRTL ? (
               <LucideChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
@@ -127,7 +127,7 @@ export default function CarouselWrapper({
       {/* Custom Pagination Container */}
       {showPagination && items.length > 1 && (
         <div
-          className={`${pagElClass} relative mt-8 flex items-center justify-center gap-1.5 [&_.swiper-pagination-bullet]:w-2.5 [&_.swiper-pagination-bullet]:h-2.5 [&_.swiper-pagination-bullet]:bg-colors-primary-200 [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet]:duration-300 [&_.swiper-pagination-bullet]:cursor-pointer`}
+          className={`${pagElClass} relative mt-9 lg:mt-12 flex items-center justify-center gap-1.5 [&_.swiper-pagination-bullet]:w-2.5 [&_.swiper-pagination-bullet]:h-2.5 [&_.swiper-pagination-bullet]:bg-colors-primary-200 [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet]:duration-300 [&_.swiper-pagination-bullet]:cursor-pointer`}
         />
       )}
     </div>

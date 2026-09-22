@@ -36,30 +36,29 @@ export default function HomeDoctors({ getDirection }) {
 
   // Responsive breakpoints matching carousel logic
   const doctorCarouselBreakpoints = {
-    320: { slidesPerView: 1.2, spaceBetween: 10 },
-    480: { slidesPerView: 2, spaceBetween: 12 },
+    320: { slidesPerView: 1.4, spaceBetween: 10 },
+    480: { slidesPerView: 2.3, spaceBetween: 12 },
     768: { slidesPerView: 3, spaceBetween: 14 },
     1024: { slidesPerView: 4, spaceBetween: 16 },
-    1280: { slidesPerView: 5, spaceBetween: 20 },
   };
-
   return (
     <section
       dir={getDirection ? getDirection() : "ltr"}
-      className="py-16 lg:py-24 px-4 sm:px-6 xl:px-24 bg-colors-bg"
+      className="px-4 sm:px-6 xl:px-24 pb-16 lg:pb-24"
     >
-      <div className="mx-auto space-y-8 lg:space-y-12">
+      <div className="mx-auto space-y-8 lg:space-y-12 py-8 lg:py-14 px-4 sm:px-6 xl:px-12 bg-colors-primary-50 rounded-xl">
         {/* Section Header */}
         <SectionHeading title={t("homeDoctorsTitle")} />
 
         {/* Loading Skeleton State */}
         {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
             {[...Array(5)].map((_, i) => (
               <div
                 key={i}
-                className={`w-full h-96 rounded-[200px] md:rounded-[120px] bg-colors-textLightGray/50 animate-pulse
-                ${i > 0 ? "hidden sm:block" : ""}`}
+                className={`w-full h-80 md:h-96 rounded-lg md:rounded-xl bg-colors-textLightGray/50 animate-pulse ${
+                  i > 0 ? "hidden sm:block" : ""
+                }`}
               />
             ))}
           </div>
@@ -91,23 +90,22 @@ export default function HomeDoctors({ getDirection }) {
                 : "/images/doctor-placeholder.jpg";
 
               return (
-                <div className="relative w-full h-96 rounded-[200px] md:rounded-[120px] overflow-hidden border-2 border-colors-primary-200/50 shadow-sm hover:shadow-md transition-all duration-500">
-                  {/* Doctor Full Photograph */}
+                <div className="relative w-full h-80 md:h-96 rounded-lg md:rounded-xl overflow-hidden border-2 border-colors-primary-200/50 shadow-sm hover:shadow-md transition-all duration-500 bg-colors-primary-100/30">
                   <img
                     src={imageUrl}
                     alt={doctorName}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-contain object-center transition-transform duration-500 hover:scale-105"
                   />
 
                   {/* Dark Fade Gradient Overlay at the Bottom */}
-                  <div className="absolute inset-x-0 bottom-0 pt-28 pb-8 px-4 bg-gradient-to-t from-colors-primary-500/80 via-colors-primary-500/60 to-transparent text-center flex flex-col justify-end items-center space-y-1">
+                  <div className="absolute inset-x-0 bottom-0 pt-16 sm:pt-28 pb-4 sm:pb-8 px-2 sm:px-4 bg-gradient-to-t from-colors-primary-500/90 via-colors-primary-500/60 to-transparent text-center flex flex-col justify-end items-center space-y-0.5 sm:space-y-1">
                     {/* Doctor Name */}
-                    <h3 className="font-title text-h4 md:text-h5 font-bold text-colors-textLightColor leading-snug drop-shadow-sm">
+                    <h3 className="font-title text-sm sm:text-h4 md:text-h5 font-bold text-colors-textLightColor leading-snug drop-shadow-sm">
                       {doctorName}
                     </h3>
 
                     {/* Specialization Field */}
-                    <p className="font-body text-xs md:text-sm font-bold text-colors-textLightColor/70 drop-shadow-xs">
+                    <p className="font-body text-[10px] sm:text-xs md:text-sm font-bold text-colors-textLightColor/80 drop-shadow-xs">
                       {specializationText}
                     </p>
                   </div>

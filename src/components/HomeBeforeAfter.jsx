@@ -48,9 +48,9 @@ export default function HomeBeforeAfter({ getDirection }) {
   return (
     <section
       dir={getDirection ? getDirection() : "ltr"}
-      className="py-16 lg:py-24 px-4 sm:px-6 xl:px-24 bg-colors-primary-50"
+      className="px-4 sm:px-6 xl:px-24 py-16 lg:py-24"
     >
-      <div className="mx-auto space-y-8 lg:space-y-12">
+      <div className="mx-auto space-y-8 lg:space-y-12 py-8 lg:py-14 px-4 sm:px-6 xl:px-12 bg-colors-primary-50 rounded-xl">
         {/* Section Header */}
         <SectionHeading title={t("beforeAfterTitle")} />
 
@@ -60,7 +60,7 @@ export default function HomeBeforeAfter({ getDirection }) {
             {[...Array(3)].map((_, i) => (
               <div
                 key={i}
-                className="w-full h-56 sm:h-72 lg:h-80 rounded-xl bg-colors-textLightGray/40 animate-pulse"
+                className="w-full h-64 sm:h-72 lg:h-80 rounded-xl bg-colors-textLightGray/40 animate-pulse"
               />
             ))}
           </div>

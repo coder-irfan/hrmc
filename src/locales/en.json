@@ -11,7 +11,7 @@
   "hero": {
     "title_part1": "Trusted Healthcare",
     "title_highlight": "Center for You",
-    "description": "HRMC Hospital provides world-class medical treatments, advanced diagnostic services, and compassionate patient care with modern infrastructure.",
+    "description": "Habib Rohani Medical Center Hospital provides world-class medical treatments, advanced diagnostic services, and compassionate patient care with modern infrastructure.",
     "badge_title": "Certified Facility",
     "badge_subtitle": "High Quality Standards",
     "book_appointment": "Book Appointment"
@@ -37,21 +37,46 @@
 
   "homeDoctorsTitle": "Our Medical Specialists",
   "noDoctors": "No doctors information available at the moment.",
-
   "allDoctorsTitle": "Our Medical Team & Specialists",
-
   "beforeAfterTitle": "Before & After Transformations",
   "noBeforeAfter": "No transformation cases available at the moment.",
-
   "allBeforeAfterTitle": "Before & After Gallery",
 
-  "aboutTag": "Learn About Us",
-  "aboutTitle": "Building Everything Best That You",
-  "aboutName": "Needed",
-  "aboutDescription": "Burj-e-Zamin Construction & Architecture Company was established to provide professional services in design, construction, and project management. By combining experience and effective management. Burj-e-Zamin is committed to timely project delivery, engineering standards, and creating sustainable value in Afghanistan’s construction industry.",
-  "requestQuote": "Request a Quote",
-  "downloadProfile": "Download Company Profile",
-  "companyProfile": "Company Profile",
+  "footerPagesTitle": "Pages",
+  "footerQuickLinksTitle": "Quick Links",
+  "contactLocation": "Location",
+  "footerDescription": "Providing modern healthcare solutions, expert medical consultation, and 24/7 dedicated patient care.",
+  "addressTitle": "Address",
+  "hospitalAddress": "Kabul, Afghanistan, Shahr-e-Naw, Ansari, 3rd Floor",
+  "contactFooterTitle": "Contact",
+  "developedBy": "Designed and Developed by",
+
+  "aboutShort": {
+    "subtitle": "About Our Center",
+    "title": "Habib Rohani Medical Center",
+    "description": "Habib Rohani Medical Center is a premier healthcare facility committed to delivering exceptional patient care. Equipped with advanced medical technologies and led by experienced specialist doctors, we provide comprehensive diagnostic, therapeutic, and preventive services tailored to community health needs.",
+    "book_appointment": "Book Appointment",
+    "read_more": "Read More"
+  },
+
+  "aboutPage": {
+    "title": "Habib Rohani Medical Center",
+    "description_p1": "Habib Rohani Medical Center is a premier healthcare institution dedicated to providing comprehensive, high-quality medical services to our community. Established with a vision of medical excellence, our center combines modern medical technologies with a compassionate, patient-centered approach to healthcare delivery.",
+    "description_p2": "Our facility is staffed by a team of highly qualified specialist physicians, experienced clinical personnel, and dedicated support teams. We offer a broad range of outpatient services, diagnostic imaging, laboratory tests, and specialized consultations aimed at improving health outcomes and fostering long-term wellness for every patient we serve."
+  },
+
+  "whyUs": {
+    "title": "Why Choose Habib Rohani Medical Center?",
+    "description_p1": "At Habib Rohani Medical Center, we prioritize your health and well-being above all else. Our state-of-the-art diagnostic equipment and evidence-based treatment procedures ensure that every patient receives precise medical care in a comfortable and hygienic environment.",
+    "description_p2": "We stand out due to our compassionate clinical staff, experienced specialists across various fields, and swift, patient-focused emergency services. Choosing us means placing your health in trusted hands dedicated to delivery, accuracy, and patient safety."
+  },
+
+  "quickContactBannerTitle": "Contact Ways With",
+  "quickContactBannerSub": "Our Hospital",
+  "quickContactPhoneTitle": "Support Units",
+  "quickContactEmailTitle": "Support Email",
+  "quickContactAddressTitle": "Hospital Address",
+  "quickContactSocialFollow": "Follow us on social media",
 
   "yearsExperience": "Years of Experience",
   "aboutDetailTag": "About Our Company",
@@ -228,6 +253,5 @@
   "moreInfo": "More Info",
   "privacy": "Privacy",
   "contactInfo": "Contact Info",
-  "allRights": "© {{year}} all rights reserved.",
-  "developedBy": "Developed by"
+  "allRights": "© {{year}} all rights reserved."
 }

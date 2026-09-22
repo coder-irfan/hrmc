@@ -29,9 +29,7 @@ const Layout = ({ getDirection }) => {
       </main>
 
       <Suspense fallback={<LoaderUI />}>
-        <div className="bg-footer-bg bg-contain md:bg-cover bg-no-repeat bg-bottom relative">
-          <Footer getDirection={getDirection} />
-        </div>
+        <Footer getDirection={getDirection} />
       </Suspense>
 
       <WhatsApp />

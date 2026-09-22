@@ -14,11 +14,11 @@ function Hero({ getDirection }) {
       id="home"
       className="relative px-4 sm:px-6 xl:px-24"
     >
-      <div className="bg-colors-primary-50 relative pt-28 md:pt-36 lg:pt-36 px-4 sm:px-6 lg:px-16 rounded-b-xl">
+      <div className="bg-colors-primary-50 relative pt-10 mt-20 md:pt-12 md:mt-24 lg:pt-8 lg:mt-28 px-4 sm:px-6 lg:px-16 rounded-xl">
         <img
           src="/images/heart.jpg"
           alt="Heart Graphic"
-          className={`absolute top-0 start-0 w-16 sm:w-24 md:w-[300px] opacity-10 pointer-events-none z-10 object-contain ${isRTL ? "" : "transform -scale-x-100"}`}
+          className={`hidden md:flex absolute top-0 start-0 w-16 sm:w-24 md:w-[230px] opacity-10 pointer-events-none z-10 object-contain ${isRTL ? "" : "transform -scale-x-100"}`}
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-start relative">
@@ -73,7 +73,7 @@ function Hero({ getDirection }) {
           </div>
         </div>
 
-        <div className="bg-[#f8f7f7] p-4 rounded-xl absolute -bottom-2 -start-2 z-10 hidden md:flex">
+        <div className="bg-[#f5f5f5] p-4 rounded-xl absolute -bottom-2 -start-2 z-10 hidden md:flex">
           <Button
             variant="primary"
             icon={FaCalendarAlt}

@@ -4,12 +4,14 @@ import { Globe, Phone, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import ReactCountryFlag from "react-country-flag";
 
-function Header() {
+function Header({ getDirection }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isGlobeOpen, setIsGlobeOpen] = useState(false);
 
   const { lang = "en" } = useParams();
   const { t, i18n } = useTranslation();
+
+  const isRTL = getDirection ? getDirection() === "rtl" : false;
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -45,13 +47,13 @@ function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-gray-100 shadow-sm max-w-[100rem] mx-auto">
-      <div className="relative px-4 sm:px-6 xl:px-24 h-14 lg:h-20 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-[100] py-3 px-4 sm:px-6 xl:px-24">
+      <div className="max-w-[88rem] mx-auto relative px-4 sm:px-6 xl:px-12 h-14 lg:h-20 flex items-center justify-between bg-white border border-gray-100 shadow-sm rounded-xl">
         {/* MOBILE CALL ICON (Left) */}
         <div className="md:hidden flex items-center">
           <a
             href="tel:+93799123456"
-            className="w-9 h-9 rounded-full bg-colors-primaryColor flex items-center justify-center text-white"
+            className="w-9 h-9 rounded-full bg-colors-primaryColor flex items-center justify-center text-colors-textLightColor"
             aria-label="Call Us"
           >
             <Phone className="w-4 h-4 fill-current" />
@@ -121,7 +123,9 @@ function Header() {
           </div>
         </div>
 
-        <div className="flex items-center sm:gap-4 absolute start-16 md:start-36 xl:start-auto xl:end-[260px] bg-colors-primaryColor p-2 rounded-full">
+        <div
+          className={`flex items-center sm:gap-4 absolute start-16 md:start-36 xl:start-auto xl:end-[220px] ${isRTL ? "xl:end-[210px]" : ""} bg-colors-primaryColor p-2 rounded-full`}
+        >
           <div className="relative" ref={dropdownRef}>
             <button
               className="flex text-colors-textLightColor items-center gap-2 cursor-pointer uppercase"
@@ -230,7 +234,7 @@ function Header() {
           <div className="flex items-center gap-3">
             <a
               href="tel:+93799123456"
-              className="w-8 h-8 rounded-full bg-colors-secondaryColor flex items-center justify-center text-white"
+              className="w-8 h-8 rounded-full bg-colors-secondaryColor flex items-center justify-center text-colors-textLightColor"
             >
               <Phone className="w-4 h-4 fill-current" />
             </a>

@@ -56,7 +56,7 @@ const Breadcrumb = ({ getDirection }) => {
   return (
     <section
       dir={getDirection ? getDirection() : "ltr"}
-      className="mt-14 lg:mt-20 py-4 lg:py-6 px-4 sm:px-6 xl:px-24"
+      className="mt-16 lg:mt-20 py-4 lg:py-6 px-4 sm:px-6 xl:px-24"
     >
       <div className="w-full mx-auto flex items-center justify-start bg-colors-primary-700 py-4 sm:py-6 px-5 sm:px-6 md:px-8 rounded-xl justify-start">
         <nav aria-label="Breadcrumb">

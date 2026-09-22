@@ -36,19 +36,19 @@ export default function Doctors({ getDirection }) {
   return (
     <section
       dir={getDirection ? getDirection() : "ltr"}
-      className="pt-12 pb-20 lg:pt-20 lg:pb-24 px-4 sm:px-6 xl:px-24 bg-colors-primary-50"
+      className="px-4 sm:px-6 xl:px-24 pb-8 pt-4 lg:pb-16 lg:pt-10"
     >
-      <div className="mx-auto space-y-8 lg:space-y-12">
+      <div className="mx-auto space-y-8 lg:space-y-12 px-4 sm:px-6 xl:px-12 py-8 lg:py-14 bg-colors-primary-50 rounded-xl">
         {/* Section Header */}
         <SectionHeading title={t("allDoctorsTitle")} />
 
         {/* Loading Skeleton Grid */}
         {loading ? (
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 lg:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-4">
             {[...Array(5)].map((_, i) => (
               <div
                 key={i}
-                className="w-full h-60 sm:h-96 rounded-[200px] md:rounded-[120px] bg-colors-textLightGray/50 animate-pulse"
+                className="w-full h-64 md:h-96 rounded-lg md:rounded-xl bg-colors-textLightGray/50 animate-pulse"
               />
             ))}
           </div>
@@ -56,15 +56,12 @@ export default function Doctors({ getDirection }) {
           /* Empty State */
           <div className="text-center py-8 lg:py-12 bg-colors-secondBg rounded-xl border border-dashed border-colors-primary-200">
             <p className="font-body text-description text-colors-textDarkGray">
-              {t(
-                "noDoctors",
-                "No doctors information available at the moment.",
-              )}
+              {t("noDoctors")}
             </p>
           </div>
         ) : (
           /* Responsive CSS Grid */
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 lg:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-4">
             {doctors.map((doctor) => {
               const doctorName = doctor?.name || "";
               const specializationText =
@@ -78,13 +75,13 @@ export default function Doctors({ getDirection }) {
               return (
                 <div
                   key={doctor._id}
-                  className="relative w-full h-60 sm:h-96 rounded-[200px] md:rounded-[120px] overflow-hidden border-2 border-colors-primary-200/50 shadow-sm hover:shadow-md transition-all duration-500"
+                  className="relative w-full h-64 md:h-96 rounded-lg md:rounded-xl overflow-hidden border-2 border-colors-primary-200/50 shadow-sm hover:shadow-md transition-all duration-500"
                 >
                   {/* Doctor Full Photograph */}
                   <img
                     src={imageUrl}
                     alt={doctorName}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
                   />
 
                   {/* Dark Fade Gradient Overlay at the Bottom */}

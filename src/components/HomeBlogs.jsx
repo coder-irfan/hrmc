@@ -44,7 +44,7 @@ export default function HomeBlogs({ getDirection }) {
   // Custom Swiper Breakpoints
   // Shows 3 cards on desktop, and 1.25 slides on mobile (~1 and ~1/3 of the second card)
   const blogCarouselBreakpoints = {
-    320: { slidesPerView: 1.25, spaceBetween: 10 },
+    320: { slidesPerView: 1.1, spaceBetween: 10 },
     640: { slidesPerView: 2, spaceBetween: 12 },
     1024: { slidesPerView: 3, spaceBetween: 14 },
   };
@@ -66,9 +66,9 @@ export default function HomeBlogs({ getDirection }) {
   return (
     <section
       dir={getDirection ? getDirection() : "ltr"}
-      className="pt-12 pb-12 lg:pt-20 lg:pb-16 px-4 sm:px-6 xl:px-24 bg-colors-primary-50"
+      className="px-4 sm:px-6 xl:px-24 pt-16 pb-10 lg:pt-24 lg:pb-16"
     >
-      <div className="mx-auto space-y-6 lg:space-y-10">
+      <div className="mx-auto space-y-6 lg:space-y-10 py-8 lg:py-14 px-4 sm:px-6 xl:px-12 bg-colors-primary-50 rounded-xl bg-colors-primary-50">
         {/* Section Header */}
         <SectionHeading title={t("homeBlogsTitle")} />
 

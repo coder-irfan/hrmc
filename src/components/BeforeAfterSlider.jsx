@@ -19,29 +19,43 @@ export function BeforeAfterSlider({ item, lang, isRTL }) {
 
   const handleMove = useCallback((clientX) => {
     if (!containerRef.current) return;
+
     const rect = containerRef.current.getBoundingClientRect();
+    if (!rect.width) return;
+
     const x = clientX - rect.left;
-    let percentage = (x / rect.width) * 100;
+    const percentage = (x / rect.width) * 100;
 
-    if (percentage < 0) percentage = 0;
-    if (percentage > 100) percentage = 100;
-
-    setSliderPosition(percentage);
+    setSliderPosition(Math.min(100, Math.max(0, percentage)));
   }, []);
 
   const handleTouchMove = (e) => {
     if (!isDragging) return;
-    handleMove(e.touches[0].clientX);
+
+    e.stopPropagation();
+    const touch = e.touches[0];
+    if (touch) handleMove(touch.clientX);
   };
 
   const handleMouseMove = (e) => {
     if (!isDragging) return;
+
+    e.stopPropagation();
     handleMove(e.clientX);
   };
 
   const handleMouseDown = (e) => {
     e.stopPropagation();
     setIsDragging(true);
+    handleMove(e.clientX);
+  };
+
+  const handleTouchStart = (e) => {
+    e.stopPropagation();
+    setIsDragging(true);
+
+    const touch = e.touches[0];
+    if (touch) handleMove(touch.clientX);
   };
 
   const handleMouseUp = () => setIsDragging(false);
@@ -53,11 +67,11 @@ export function BeforeAfterSlider({ item, lang, isRTL }) {
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
       onMouseMove={handleMouseMove}
-      onTouchStart={handleMouseDown}
+      onTouchStart={handleTouchStart}
       onTouchEnd={handleMouseUp}
       onTouchMove={handleTouchMove}
       /* "swiper-no-swiping" prevents Swiper Carousel from dragging when interacting with this card */
-      className="swiper-no-swiping group relative w-full h-56 sm:h-72 lg:h-80 rounded-xl overflow-hidden border border-colors-primary-200/50 shadow-sm hover:shadow-xl transition-all duration-300 select-none bg-colors-primary-100 cursor-ew-resize"
+      className="swiper-no-swiping group relative w-full h-64 sm:h-72 lg:h-80 rounded-xl overflow-hidden border border-colors-primary-200/50 shadow-sm hover:shadow-xl transition-all duration-300 select-none bg-colors-primary-100 cursor-ew-resize"
     >
       {/* After Image (Full background layer) */}
       <img
@@ -66,40 +80,19 @@ export function BeforeAfterSlider({ item, lang, isRTL }) {
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
       />
 
-      {/* Before Image (Clipped Layer) */}
-      <div
-        className="absolute inset-y-0 overflow-hidden pointer-events-none"
-        style={{
-          width: isRTL ? `${100 - sliderPosition}%` : `${sliderPosition}%`,
-          left: isRTL ? "auto" : 0,
-          right: isRTL ? 0 : "auto",
-        }}
-      >
-        {/* FIXED: Using inset-0, w-full, h-full, object-cover with fixed outer width prevents squishing */}
-        <div
-          className="absolute inset-y-0 start-0 overflow-hidden pointer-events-none"
-          style={{
-            width: `${sliderPosition}%`,
-          }}
-        >
-          <img
-            src={beforeUrl}
-            alt={`${titleText} Before`}
-            className="absolute inset-0 w-full h-full object-cover max-w-none pointer-events-none"
-            style={{
-              width: containerRef.current
-                ? `${containerRef.current.getBoundingClientRect().width}px`
-                : "100%",
-            }}
-          />
-        </div>
-      </div>
+      {/* Before Image: always card-sized, then visually clipped from the right. */}
+      <img
+        src={beforeUrl}
+        alt={`${titleText} Before`}
+        className="absolute inset-0 w-full h-full max-w-none object-cover pointer-events-none"
+        style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+      />
 
       {/* Visual Labels */}
-      <span className="absolute top-3 start-3 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-2.5 py-1 rounded-md z-10 pointer-events-none uppercase tracking-wider">
+      <span className="absolute top-3 start-3 bg-colors-textDarkColor/30 backdrop-blur-md text-colors-textLightColor text-xs sm:text-sm font-bold px-2.5 py-1 rounded-md z-10 pointer-events-none tracking-wider">
         {isRTL ? "بعد" : "Before"}
       </span>
-      <span className="absolute top-3 end-3 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-2.5 py-1 rounded-md z-10 pointer-events-none uppercase tracking-wider">
+      <span className="absolute top-3 end-3 bg-colors-textDarkColor/30 backdrop-blur-md text-colors-textLightColor text-xs sm:text-sm font-bold px-2.5 py-1 rounded-md z-10 pointer-events-none tracking-wider">
         {isRTL ? "قبل" : "After"}
       </span>
 
@@ -110,13 +103,15 @@ export function BeforeAfterSlider({ item, lang, isRTL }) {
           left: `${sliderPosition}%`,
         }}
       >
-        <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 start-1/2 w-8 h-8 rounded-full bg-colors-primary-500 text-colors-textLightColor shadow-lg flex items-center justify-center border-2 border-white pointer-events-auto cursor-ew-resize">
+        <div
+          className={`absolute top-1/2 -translate-y-1/2 -translate-x-1/2 ${isRTL ? "translate-x-1/2 " : ""} start-1/2 w-8 h-8 rounded-full bg-colors-primary-500 text-colors-textLightColor shadow-lg flex items-center justify-center border-2 border-white pointer-events-auto cursor-ew-resize`}
+        >
           <LucideGripVertical className="w-4 h-4" />
         </div>
       </div>
 
       {/* Frosted Glass Title Overlay */}
-      <div className="absolute inset-x-0 bottom-0 p-2 md:p-3 bg-colors-primary-300/30 backdrop-blur-sm border-t border-colors-bg/20 flex items-center justify-center text-colors-textLightColor transition-all duration-300 group-hover:bg-colors-primary-600/30 z-30 pointer-events-none">
+      <div className="absolute inset-x-0 bottom-0 p-2 md:p-3 bg-colors-primary-300/30 backdrop-blur-sm border-t border-colors-bg/20 flex items-center justify-center text-colors-textLightColor z-30 pointer-events-none">
         <h3 className="font-title text-h4 md:text-h3 font-semibold truncate leading-snug text-center">
           {titleText}
         </h3>

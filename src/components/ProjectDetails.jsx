@@ -133,7 +133,7 @@ function ProjectDetails({ getDirection }) {
                   />
                   <button
                     onClick={() => setLightboxIndex(0)}
-                    className="absolute bottom-4 end-4 bg-black/60 hover:bg-black/80 backdrop-blur-md text-white p-3 rounded-md lg:rounded-xl shadow-lg transition-all opacity-90 hover:scale-105 flex items-center gap-2 text-xs font-semibold z-10"
+                    className="absolute bottom-4 end-4 bg-black/60 hover:bg-black/80 backdrop-blur-md text-colors-textLightColor p-3 rounded-md lg:rounded-xl shadow-lg transition-all opacity-90 hover:scale-105 flex items-center gap-2 text-xs font-semibold z-10"
                   >
                     <Maximize2 className="w-4 h-4" />
                     <span>{t("viewFullImage")}</span>
@@ -168,7 +168,7 @@ function ProjectDetails({ getDirection }) {
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                              <Maximize2 className="w-6 h-6 text-white" />
+                              <Maximize2 className="w-6 h-6 text-colors-textLightColor" />
                             </div>
                           </motion.div>
                         );
@@ -280,7 +280,7 @@ function ProjectDetails({ getDirection }) {
             {/* Close Button */}
             <button
               onClick={() => setLightboxIndex(null)}
-              className="absolute top-6 end-6 text-white/80 hover:text-white p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all z-10"
+              className="absolute top-6 end-6 text-colors-textLightColor/80 hover:text-colors-textLightColor p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all z-10"
             >
               <X className="w-6 h-6" />
             </button>
@@ -290,13 +290,13 @@ function ProjectDetails({ getDirection }) {
               <>
                 <button
                   onClick={handlePrevImage}
-                  className="absolute start-4 text-white/80 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all z-10"
+                  className="absolute start-4 text-colors-textLightColor/80 hover:text-colors-textLightColor p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all z-10"
                 >
                   <ChevronLeft className="w-6 h-6 rtl:rotate-180" />
                 </button>
                 <button
                   onClick={handleNextImage}
-                  className="absolute end-4 text-white/80 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all z-10"
+                  className="absolute end-4 text-colors-textLightColor/80 hover:text-colors-textLightColor p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all z-10"
                 >
                   <ChevronRight className="w-6 h-6 rtl:rotate-180" />
                 </button>

@@ -1,79 +1,61 @@
 import { useTranslation } from "react-i18next";
-import { LucideDownload } from "lucide-react";
+import { useParams } from "react-router-dom";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import Button from "./Button";
 
 function About({ getDirection }) {
   const { t } = useTranslation();
-  const isRTL = getDirection() === "rtl";
+  const { lang } = useParams();
+  const isRTL = getDirection ? getDirection() === "rtl" : false;
 
   return (
-    <>
-      <section
-        id="about-us"
-        dir={getDirection()}
-        className="py-14 md:py-20 xl:py-28 px-1 md:px-6 lg:px-16"
-      >
-        <div
-          className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 bg-colors-secondBg p-6 md:p-10 lg:p-10 xl:p-8
-          rounded-2xl relative"
-        >
-          <img
-            src="/images/hat.webp"
-            alt="hat"
-            loading="lazy"
-            decoding="async"
-            className="absolute -top-8 w-20 end-0 md:w-20 md:-top-12 xl:-top-16 lg:end-6 lg:w-28"
-          />
-          <div
-            className={`max-w-[500px] md:max-w-[350px] lg:max-w-[400px] xl:max-w-xl mx-auto space-y-4 lg:space-y-6 text-center ${isRTL ? "md:text-right" : "md:text-left"}`}
-          >
+    <section
+      id="about-us"
+      dir={getDirection ? getDirection() : "ltr"}
+      className="pb-14 md:pb-20 xl:pb-28 px-4 sm:px-6 xl:px-24"
+    >
+      <div className="bg-colors-primary-50 px-4 pt-8 pb-4 md:pb-6 md:p-6 lg:p-8 rounded-xl relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
+          {/* Text Content Column: Grid 5 */}
+          <div className="lg:col-span-5 order-2 lg:order-1 space-y-4 lg:space-y-6 text-center lg:text-start">
+            {/* Title & Subtitle Only */}
             <div className="space-y-2">
-              <div
-                className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-primaryColorDarkesh`}
-              >
-                <p className="mx-4 font-medium md:text-lg lg:text-xl">
-                  {t("aboutTag")}
-                </p>
-              </div>
-
-              <h2 className="font-bold  text-h2 md:leading-[1.3]">
-                {t("aboutTitle")}
-                <span className="text-colors-primaryColorDark">
-                  {" "}
-                  {t("aboutName")}
-                </span>
+              <p className="text-colors-primaryColorDark font-semibold text-h4 tracking-wider">
+                {t("aboutShort.subtitle")}
+              </p>
+              <h2 className="font-bold text-h2 text-colors-textDarkColor leading-tight">
+                {t("aboutShort.title")}
               </h2>
             </div>
 
-            <p
-              className={`text-colors-textDarkGray text-center md:text-justify text-description ${isRTL ? "md:pr-0" : "md:pr-10"}`}
-            >
-              {t("aboutDescription")}
+            {/* Description (4-5 Lines) */}
+            <p className="text-colors-textDarkGray text-description text-justify">
+              {t("aboutShort.description")}
             </p>
 
-            <div className="lg:pt-4 flex items-center justify-center md:justify-start">
-              <a
-                href="/BEZ Company Profile 02.pdf"
-                download="BEZ Company Profile 02.pdf"
-                className="button"
-              >
-                <LucideDownload className="w-4 h-4" />
-                <span>{t("downloadProfile")}</span>
-              </a>
+            {/* Action Buttons */}
+            <div className="lg:pt-2 flex flex-wrap items-center justify-center lg:justify-start">
+              <Button
+                variant="primary"
+                icon={isRTL ? FaArrowLeft : FaArrowRight}
+                text={t("aboutShort.read_more")}
+                to={`/${lang || "fa"}/about`}
+              />
             </div>
           </div>
 
-          <div className="flex items-center justify-between gap-x-4 md:gap-x-6 xl:gap-x-8">
+          {/* Image Column: Grid 7 */}
+          <div className="lg:col-span-7 order-2 lg:order-1 flex justify-center items-center">
             <img
-              src="/images/about-us.jpg"
-              alt="burj zamin building"
+              src="images/about-image.webp"
+              alt={t("aboutShort.title")}
               loading="lazy"
-              decoding="async"
-              className="rounded-lg w-[500px] sm:h-96 xl:h-auto lg:w-auto object-cover"
+              className="rounded-xl w-full max-w-md lg:max-w-none h-48 sm:h-96 lg:h-[420px] object-cover shadow-md"
             />
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 

@@ -86,9 +86,9 @@ export default function Services({ getDirection }) {
   return (
     <section
       dir={getDirection()}
-      className="pt-12 pb-20 lg:pt-20 lg:pb-24 px-4 sm:px-6 xl:px-24 bg-colors-primary-50"
+      className="px-4 sm:px-6 xl:px-24 pb-8 pt-4 lg:pb-16 lg:pt-10"
     >
-      <div className="mx-auto space-y-6 lg:space-y-10">
+      <div className="mx-auto space-y-8 lg:space-y-12 px-4 sm:px-6 xl:px-12 py-8 lg:py-14 bg-colors-primary-50 rounded-xl">
         {/* Page Title & Header */}
         <SectionHeading title={t("allServicesTitle")} />
 
