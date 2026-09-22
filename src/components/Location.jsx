@@ -10,9 +10,9 @@ function Location({ getDirection }) {
     <section
       id="location"
       dir={getDirection ? getDirection() : "ltr"}
-      className="px-4 sm:px-6 xl:px-24 pt-4 pb-10 lg:pt-8 lg:pb-16"
+      className="px-4 sm:px-6 xl:px-24 pb-10 lg:pb-16"
     >
-      <div className="mx-auto space-y-6 lg:space-y-10">
+      <div className="mx-auto space-y-8 lg:space-y-12 py-8 lg:py-14 px-4 sm:px-6 xl:px-12 bg-colors-primary-50 rounded-xl">
         {/* Section Header */}
         <SectionHeading title={t("locationTitle")} />
 

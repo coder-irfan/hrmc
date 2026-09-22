@@ -30,7 +30,7 @@ function AboutDetails({ getDirection }) {
             src="images/about-image.webp"
             alt={t("aboutPage.title")}
             loading="lazy"
-            className="rounded-2xl w-full max-w-lg lg:max-w-none h-64 sm:h-96 lg:h-[480px] object-cover shadow-lg"
+            className="rounded-xl w-full max-w-lg lg:max-w-none h-64 sm:h-96 lg:h-[480px] object-cover shadow-lg"
           />
         </div>
       </div>

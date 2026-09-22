@@ -46,22 +46,22 @@ function Contact({ getDirection }) {
     <section
       id="contact"
       dir={getDirection ? getDirection() : "ltr"}
-      className="px-4 sm:px-6 xl:px-24 py-16 lg:py-24"
+      className="px-4 sm:px-6 xl:px-24 pt-6 lg:pt-10"
     >
       <div className="mx-auto space-y-8 lg:space-y-12 py-8 lg:py-14 px-4 sm:px-6 xl:px-12 bg-colors-primary-50 rounded-xl">
         {/* Section Heading */}
         <SectionHeading title={t("contactPageTitle")} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-stretch">
           {/* Left Column: Image with Working Hours Badge */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <div className="relative w-full h-[280px] sm:h-[350px] lg:h-full min-h-[280px] rounded-2xl overflow-hidden shadow-sm border border-colors-primary-100">
+            <div className="relative w-full h-[280px] sm:h-[350px] lg:h-full min-h-[280px] rounded-xl overflow-hidden shadow-sm border border-colors-primary-100 bg-colors-bg">
               <img
                 src="/images/contact-us-image.webp"
                 alt={t("contactImageAlt")}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-colors-primary-900/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-colors-primary-500/60 via-transparent to-transparent" />
 
               {/* Floating Working Hours Badge */}
               <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-sm border border-white/50 flex items-center gap-3">
@@ -81,7 +81,7 @@ function Contact({ getDirection }) {
           </div>
 
           {/* Right Column: Contact & Appointment Form */}
-          <div className="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-colors-primary-100 shadow-sm">
+          <div className="lg:col-span-7 bg-white rounded-xl p-6 sm:p-8 lg:p-10 border border-colors-primary-100 shadow-sm">
             <form
               className="flex flex-col gap-4 lg:gap-5"
               onSubmit={handleSubmit(onSubmit)}

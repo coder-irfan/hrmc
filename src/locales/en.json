@@ -78,6 +78,11 @@
   "quickContactAddressTitle": "Hospital Address",
   "quickContactSocialFollow": "Follow us on social media",
 
+  "ctaHospitalTitle": "Need Immediate Medical Care or Consultation?",
+  "ctaHospitalDescription": "Our medical team is available 24/7. Book your appointment online or contact our emergency unit directly.",
+  "ctaBookAppointment": "Book Appointment",
+  "ctaEmergencyCall": "Emergency Call",
+
   "locationTitle": "Our Location",
   "LoadingMap": "Loading map...",
 

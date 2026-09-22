@@ -16,7 +16,7 @@ function WhyUs({ getDirection }) {
             src="images/why-us.webp"
             alt={t("whyUs.title")}
             loading="lazy"
-            className="rounded-2xl w-full max-w-lg lg:max-w-none h-64 sm:h-96 lg:h-[480px] object-cover shadow-lg"
+            className="rounded-xl w-full max-w-lg lg:max-w-none h-64 sm:h-96 lg:h-[480px] object-cover shadow-lg"
           />
         </div>
 

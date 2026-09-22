@@ -81,6 +81,11 @@
   "quickContactAddressTitle": "د روغتون پته",
   "quickContactSocialFollow": "موږ په لاندې ټولنیزو شبکو کې تعقیب کړئ",
 
+  "ctaHospitalTitle": "عاجلو طبي خدماتو یا مشورې ته اړتیا لرئ؟",
+  "ctaHospitalDescription": "زموږ مسلکي ټیم ۲۴ ساعته ستاسو خدمت کې دی. همدا اوس خپل وخت آنلاین ریزرف کړئ یا له عاجلې څانګې سره اړیکه ونیسئ.",
+  "ctaBookAppointment": "د نوبت انلاین اخیستل",
+  "ctaEmergencyCall": "عاجله اړیکه",
+
   "locationTitle": "زموږ موقعیت",
 
   "contactPageTitle": "اړیکه او د وخت اخیستل",

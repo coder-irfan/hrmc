@@ -81,6 +81,11 @@
   "quickContactAddressTitle": "آدرس شفاخانه",
   "quickContactSocialFollow": "ما را در شبکه‌های اجتماعی زیر دنبال کنید",
 
+  "ctaHospitalTitle": "نیازمند مراقبت‌های عاجل یا مشاوره طبی هستید؟",
+  "ctaHospitalDescription": "تیم تخصصی ما ۲۴ ساعته در خدمت شماست. همین حالا نوبت خود را آنلاین ثبت کنید یا با بخش عاجل تماس بگیرید.",
+  "ctaBookAppointment": "رزرو آنلاین نوبت",
+  "ctaEmergencyCall": "تماس عاجل",
+
   "locationTitle": "موقعیت ما",
 
   "email": "ایمیل",
