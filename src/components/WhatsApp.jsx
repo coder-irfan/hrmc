@@ -40,7 +40,7 @@ function WhatsApp() {
       <span className="absolute inset-0 rounded-full bg-[#25d366] opacity-30 animate-ping-slower"></span>
 
       <a
-        href="https://wa.me/93703660660?text=Hello%20I%20want%20more%20information%20about%20Burjezamin"
+        href="https://wa.me/937786601801?text=Hello%20I%20want%20more%20information%20about%20Burjezamin"
         target="_blank"
         rel="noopener noreferrer"
         className="relative p-3 md:p-4 rounded-full shadow-lg text-colors-textLightColor bg-[#25d366] hover:bg-[#20b456] transition-all duration-300 flex items-center justify-center"

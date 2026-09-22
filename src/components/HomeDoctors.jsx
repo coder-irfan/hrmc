@@ -44,7 +44,7 @@ export default function HomeDoctors({ getDirection }) {
   return (
     <section
       dir={getDirection ? getDirection() : "ltr"}
-      className="px-4 sm:px-6 xl:px-24 pb-16 lg:pb-24"
+      className="px-4 sm:px-6 xl:px-24 pb-10 lg:pb-20"
     >
       <div className="mx-auto space-y-8 lg:space-y-12 py-8 lg:py-14 px-4 sm:px-6 xl:px-12 bg-colors-primary-50 rounded-xl">
         {/* Section Header */}

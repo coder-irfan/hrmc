@@ -53,12 +53,7 @@ export default {
         },
       },
       backgroundImage: {
-        "hero-bg": "url('/images/hero-bg.webp')",
-        "divider-bg": "url('/images/cta.webp')",
-        "testimonial-bg": "url('/images/map-pattern.webp')",
-        "divider2-bg": "url('/images/cta2.webp')",
-        "contact-bg": "url('/images/our-service-background.webp')",
-        "footer-bg": "url('/images/footerbg.png')",
+        "divider-bg": "url('/images/banner-image.webp')",
       },
       fontSize: {
         h1: "clamp(1.5rem, 0.9706rem + 4.7059vw, 3.3rem)",

@@ -52,8 +52,8 @@ function Header({ getDirection }) {
         {/* MOBILE CALL ICON (Left) */}
         <div className="md:hidden flex items-center">
           <a
-            href="tel:+93799123456"
-            className="w-9 h-9 rounded-full bg-colors-primaryColor flex items-center justify-center text-colors-textLightColor"
+            href="tel:+937786601801"
+            className="w-8 h-8 rounded-full bg-colors-primaryColor flex items-center justify-center text-colors-textLightColor"
             aria-label="Call Us"
           >
             <Phone className="w-4 h-4 fill-current" />
@@ -90,7 +90,7 @@ function Header({ getDirection }) {
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsOpen(true)}
-            className="w-9 h-9 rounded-full bg-colors-primaryColor flex items-center justify-center p-2"
+            className="w-8 h-8 rounded-full bg-colors-primaryColor flex items-center justify-center p-2"
             aria-label="Open menu"
           >
             <img
@@ -104,7 +104,7 @@ function Header({ getDirection }) {
         {/* LEFT SECTION (Desktop Call Block) */}
         <div className="hidden xl:flex items-center gap-3">
           <a
-            href="tel:+93799123456"
+            href="tel:+937786601801"
             className="w-10 h-10 rounded-full bg-colors-secondaryColor flex items-center justify-center text-colors-textLightColor hover:opacity-90 transition-opacity"
             aria-label="Call Us"
           >
@@ -115,16 +115,16 @@ function Header({ getDirection }) {
               {t("callUs")}
             </span>
             <a
-              href="tel:+93799123456"
+              href="tel:+937786601801"
               className="text-sm font-bold text-colors-textDarkGray hover:text-colors-primaryColor transition-colors"
             >
-              <bdi>+93 79 912 3456</bdi>
+              <bdi>+93 77 86 60 1801</bdi>
             </a>
           </div>
         </div>
 
         <div
-          className={`flex items-center sm:gap-4 absolute start-16 md:start-36 xl:start-auto xl:end-[220px] ${isRTL ? "xl:end-[210px]" : ""} bg-colors-primaryColor p-2 rounded-full`}
+          className={`flex items-center sm:gap-4 absolute start-14 sm:start-16 md:start-36 xl:start-auto xl:end-[230px] ${isRTL ? "xl:end-[210px]" : ""} bg-colors-primaryColor p-2 rounded-full`}
         >
           <div className="relative" ref={dropdownRef}>
             <button
@@ -133,7 +133,7 @@ function Header({ getDirection }) {
               aria-expanded={isGlobeOpen}
               aria-label="Change language"
             >
-              <Globe />
+              <Globe className="w-4 h-4 lg:w-6 lg:h-6" />
             </button>
 
             {isGlobeOpen && (
@@ -233,7 +233,7 @@ function Header({ getDirection }) {
         <div className="p-6 border-t border-gray-100 bg-colors-secondBg">
           <div className="flex items-center gap-3">
             <a
-              href="tel:+93799123456"
+              href="tel:+937786601801"
               className="w-8 h-8 rounded-full bg-colors-secondaryColor flex items-center justify-center text-colors-textLightColor"
             >
               <Phone className="w-4 h-4 fill-current" />
@@ -243,10 +243,10 @@ function Header({ getDirection }) {
                 {t("callUs")}
               </span>
               <a
-                href="tel:+93799123456"
+                href="tel:+937786601801"
                 className="text-sm font-bold text-colors-textDarkGray hover:text-colors-primaryColor transition-colors"
               >
-                <bdi>+93 79 912 3456</bdi>
+                <bdi>+93 77 86 60 1801</bdi>
               </a>
             </div>
           </div>

@@ -66,7 +66,7 @@ export default function HomeBlogs({ getDirection }) {
   return (
     <section
       dir={getDirection ? getDirection() : "ltr"}
-      className="px-4 sm:px-6 xl:px-24 pt-16 pb-10 lg:pt-24 lg:pb-16"
+      className="px-4 sm:px-6 xl:px-24 pb-10 lg:pb-16"
     >
       <div className="mx-auto space-y-6 lg:space-y-10 py-8 lg:py-14 px-4 sm:px-6 xl:px-12 bg-colors-primary-50 rounded-xl bg-colors-primary-50">
         {/* Section Header */}

@@ -22,7 +22,7 @@ function Hero({ getDirection }) {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-start relative">
-          <div className="lg:col-span-7 flex flex-col items-start text-start space-y-6 lg:space-y-14 lg:pt-12">
+          <div className="lg:col-span-7 flex flex-col items-start text-start space-y-6 lg:space-y-14 lg:pt-16">
             <div className="relative inline-block">
               <h1 className="font-title text-colors-textDarkColor font-black leading-tight">
                 <span className="text-h1">

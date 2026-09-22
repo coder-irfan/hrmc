@@ -7,7 +7,7 @@ function AboutDetails({ getDirection }) {
     <section
       id="about-page"
       dir={getDirection ? getDirection() : "ltr"}
-      className="py-10 md:py-16 xl:py-20 px-4 sm:px-6 xl:px-24"
+      className="px-4 sm:px-6 xl:px-24 pb-8 pt-4 lg:pb-16 lg:pt-10"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Text Content Column: Grid 6 */}
@@ -27,7 +27,7 @@ function AboutDetails({ getDirection }) {
         {/* Image Column: Grid 6 */}
         <div className="lg:col-span-6 order-1 lg:order-2 flex justify-center items-center">
           <img
-            src="images/about-image.webp"
+            src="/images/doctors-operating.webp"
             alt={t("aboutPage.title")}
             loading="lazy"
             className="rounded-xl w-full max-w-lg lg:max-w-none h-64 sm:h-96 lg:h-[480px] object-cover shadow-lg"

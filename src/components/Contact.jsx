@@ -19,7 +19,7 @@ function Contact({ getDirection }) {
   } = useForm();
 
   const onSubmit = (data) => {
-    const targetPhoneNumber = "93788134182";
+    const targetPhoneNumber = "937786601801";
 
     const messageTemplate = `Hello! I would like to book an appointment.
 
