@@ -124,7 +124,7 @@ function Header({ getDirection }) {
         </div>
 
         <div
-          className={`flex items-center sm:gap-4 absolute start-14 sm:start-16 md:start-36 xl:start-auto xl:end-[230px] ${isRTL ? "xl:end-[210px]" : ""} bg-colors-primaryColor p-2 rounded-full`}
+          className={`hidden flex items-center sm:gap-4 absolute start-14 sm:start-16 md:start-36 xl:start-auto xl:end-[230px] ${isRTL ? "xl:end-[210px]" : ""} bg-colors-primaryColor p-2 rounded-full`}
         >
           <div className="relative" ref={dropdownRef}>
             <button

@@ -3,34 +3,50 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Root Default -->
+  <!-- Root / Default -->
   <url>
-    <loc>https://burjezamincc.com/</loc>
-    <lastmod>2026-07-25</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://hrmc.af/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hrmc.af/en"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://hrmc.af/fa"/>
+    <xhtml:link rel="alternate" hreflang="ps" href="https://hrmc.af/ps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hrmc.af/en"/>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- English Version -->
   <url>
-    <loc>https://burjezamincc.com/en</loc>
-
-    <xhtml:link rel="alternate" hreflang="en" href="https://burjezamincc.com/en"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://burjezamincc.com/fa"/>
-    
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://hrmc.af/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hrmc.af/en"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://hrmc.af/fa"/>
+    <xhtml:link rel="alternate" hreflang="ps" href="https://hrmc.af/ps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hrmc.af/en"/>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Dari / Persian Version -->
   <url>
-    <loc>https://burjezamincc.com/fa</loc>
+    <loc>https://hrmc.af/fa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hrmc.af/en"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://hrmc.af/fa"/>
+    <xhtml:link rel="alternate" hreflang="ps" href="https://hrmc.af/ps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hrmc.af/en"/>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
-    <xhtml:link rel="alternate" hreflang="en" href="https://burjezamincc.com/en"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://burjezamincc.com/fa"/>
-
-    <lastmod>2026-07-25</lastmod>
+  <!-- Pashto Version -->
+  <url>
+    <loc>https://hrmc.af/ps</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hrmc.af/en"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://hrmc.af/fa"/>
+    <xhtml:link rel="alternate" hreflang="ps" href="https://hrmc.af/ps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hrmc.af/en"/>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
