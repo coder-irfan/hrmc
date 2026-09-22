@@ -81,109 +81,16 @@
   "locationTitle": "Our Location",
   "LoadingMap": "Loading map...",
 
-  "yearsExperience": "Years of Experience",
-  "aboutDetailTag": "About Our Company",
-  "aboutDetailDescription": "Burj Zamin stands as a pioneer in modern engineering and project execution, setting new benchmarks for quality construction and architectural design. Driven by technical innovation, strict safety standards, and dedicated project management, our team delivers long-lasting, cost-effective infrastructure tailored to meet the evolving demands of our clients.",
-  "aboutFeature1": "Certified Engineers & Designers",
-  "aboutFeature2": "Modern & High-Quality Build",
-  "aboutFeature3": "On-Time Project Delivery",
-  "aboutFeature4": "Client-Centric Approach",
-  "ourProjects": "View Our Projects",
+  "contactPageTitle": "Contact & Appointment",
+  "contactImageAlt": "Contact and Book Appointment",
+  "workingHoursTitle": "Working Hours",
+  "workingHoursText": "24/7 Emergency & Daily Consultations",
+  "formPreferredTime": "Preferred Time",
+  "formFullNamePlaceholder": "Enter your full name",
+  "formPhonePlaceholder": "07786601801",
+  "formEmailPlaceholder": "example@domain.com",
+  "formMessagePlaceholder": "Write your message or symptoms here...",
 
-  "ctaTitle": "Ready to start your project?",
-  "ctaDescription": "Burj-e-Zamin delivers reliable construction services with quality, precision, and on-time results you can trust.",
-  "ctaButton": "Get a Free Quote",
-
-  "servicesLabel": "Services",
-  "servicesTitle": "Why Choose ",
-  "servicesName": "Burj-e-Zamin",
-  "servicesDescription": "Reliable construction services focused on quality, safety, and on-time project delivery.",
-  "viewMore": "View More",
-
-  "service1_title": "Interior & Exterior Decoration",
-  "service1_desc": "Modern interior and exterior finishing solutions designed to enhance beauty, functionality, and comfort using premium high-quality materials, creative designs, and immaculate craftsmanship.",
-
-  "service2_title": "Architectural Design & Planning",
-  "service2_desc": "Professional design and planning services including dynamic layouts, 2D/3D visualization drawings, and comprehensive project planning tailored precisely to your vision and budget.",
-
-  "service3_title": "Building Construction",
-  "service3_desc": "Complete construction services for residential and commercial projects, ensuring robust structural integrity, certified materials, and long-term durability from initial foundation work to final handover.",
-
-  "service4_title": "Renovation & Remodeling",
-  "service4_desc": "Upgrade and transform existing structures with modern renovation services that optimize space, improve appearance, and maximize usability while strictly maintaining safety standards.",
-
-  "service5_title": "Project Management",
-  "service5_desc": "Efficient end-to-end project management ensuring seamless workflow, precise cost control, timely delivery, risk mitigation, and clear coordination across all construction phases.",
-
-  "service6_title": "Infrastructure & Civil Works",
-  "service6_desc": "Comprehensive road construction, groundwork, and infrastructure development built with modern machinery, technical precision, and long-lasting durability for large-scale urban and industrial projects.",
-
-  "testimonialLabel": "Testimonials",
-  "testimonialTitle1": "What Our ",
-  "testimonialHighlight": "Clients Say",
-  "testimonialDescription": "Trusted by clients for delivering reliable and high-quality construction services.",
-  "test1_text": "We worked with Burj-e-Zamin on our home project and the results were excellent. The team was professional, maintained high quality throughout, and ensured every design detail was executed perfectly.",
-  "test2_text": "Burj-e-Zamin handled our building project with great care and attention. Communication was clear, the process was smooth, and the final result exceeded our original expectations in every way.",
-  "test3_text": "A very reliable and professional company. They completed the project as promised, stayed within budget, maintained consistent quality, and delivered exceptional craftsmanship from day one.",
-  "test4_text": "Everything was handled professionally from start to finish. The team was skilled, respectful, focused on delivering lasting results, and always addressed our concerns promptly and efficiently.",
-  "test5_text": "Burj-e-Zamin delivered a modern and durable structure. Their strict commitment to deadlines and attention to detail made the entire building experience completely stress-free and very satisfying.",
-  "test6_text": "Professional service and smooth execution. The project was completed on time with high-quality workmanship in every detail, making them our top choice for future developments.",
-
-  "faqSubtitle": "FAQs",
-  "faqTitle": "Frequently Asked",
-  "faqHighlight": "Questions",
-  "faqDescription": "Find answers to common questions about our services, process, pricing, and project timelines.",
-  "faq1_q": "How long does a construction project usually take?",
-  "faq1_a": "Project timelines depend on overall size, complexity, and site conditions. Before starting, we provide a detailed schedule with clear milestone targets. Our team works efficiently to meet every deadline without ever compromising on safety or structural quality.",
-
-  "faq2_q": "How much will my project cost?",
-  "faq2_a": "Costs vary based on design choices, materials, and overall scope. We ensure total financial transparency by providing a comprehensive, itemized quote after our initial site evaluation so you know exactly what to expect without hidden fees.",
-  "faq3_q": "Do you handle both residential and commercial projects?",
-  "faq3_a": "Yes, we handle a diverse range of builds, including single-family homes, apartment complexes, corporate offices, and retail spaces. We tailor our engineering practices and site management to fit the exact demands of each sector.",
-  "faq4_q": "Do you provide design and planning services?",
-  "faq4_a": "We offer complete support in design and project planning to ensure your build is modern, structural, and functional. From initial spatial layouts to code compliance, we help guide your vision into a practical construction plan.",
-  "faq5_q": "How do you ensure quality and safety?",
-  "faq5_a": "We maintain strict quality control and safety standards across every phase of construction. By using certified materials, experienced site engineers, and continuous inspections, we guarantee durable, high-caliber craftsmanship from start to finish.",
-
-  "projectsCompleted": "Projects Completed",
-  "customerSatisfaction": "Customer Satisfaction",
-  "positiveFeedback": "Positive Feedback",
-
-  "projectsSection": "Projects",
-  "projectsTitle": "Our Latest",
-  "projectsHighlight": "Works",
-  "projectsDescription": "A curated selection of completed construction projects showcasing quality, precision, and engineering excellence.",
-
-  "projectCount": "Project",
-  "completedProject": "Completed Project",
-  "seeDetails": "See Details",
-  "showLess": "Show Less",
-  "showMore": "Show More",
-  "loadingProjects": "Loading Projects...",
-  "noProjectsFound": "No Projects Found!",
-
-  "backToProjects": "Back to Projects",
-  "projectOverview": "Project Overview",
-  "projectGallery": "Project Gallery",
-  "projectDetails": "Project Information",
-  "completionDate": "Released Date",
-  "status": "Status",
-  "completed": "Successfully Completed",
-  "qualityGuarantee": "Quality Assurance",
-  "certifiedEngineering": "Certified Standards",
-  "interestedInSimilar": "Looking for a similar engineering or construction project?",
-  "viewFullImage": "View Fullscreen",
-
-  "contactSection": "Contact",
-  "contactTitle": "Get In",
-  "contactHighlight": "Touch",
-  "contactTitleEnd": "With Us",
-  "contactDesc": "Have a project in mind? Contact us today for a clear plan, fast response, and professional support.",
-  "contactAltTitle": "Or Reach Us Directly",
-  "contactAltDesc": "Reach out to Burj-e-Zamin for inquiries, project discussions, or a free consultation. Our team is ready to assist you with clear guidance and quick responses.",
-  "phone": "Phone",
-  "location": "Location",
-  "clientLocation": "Shahr-e Naw, Clock Tower, 4th Floor, Kabul Afghanistan",
   "email": "Email",
   "fullName": "Full Name",
   "phoneNumber": "Phone",
@@ -199,60 +106,5 @@
   "phoneInvalid": "Enter a valid phone number",
   "emailError": "Please enter your email!",
   "emailInvalid": "Enter a valid email!",
-  "successMessage": "Your message has been sent successfully!",
-
-  "coreValuesSubtitle": "Our Principles",
-  "coreValuesTitle": "Our",
-  "coreValuesHighlight": "Core Values",
-  "coreValuesDescription": "Discover the core principles, engineering standards, and commitment to quality that guide all our projects.",
-  "coreValues": {
-    "integrity": {
-      "title": "Integrity & Transparency",
-      "description": "We uphold complete honesty, open communication, and high ethical standards across all our corporate operations."
-    },
-    "quality": {
-      "title": "Quality & Precision",
-      "description": "Our team ensures rigorous standards, premium craftsmanship, and engineering precision in every structural build."
-    },
-    "innovation": {
-      "title": "Innovation & Modern Methods",
-      "description": "We utilize state-of-the-art technology and modern construction methods to deliver efficient, future-ready buildings."
-    },
-    "clientFocus": {
-      "title": "Client Satisfaction",
-      "description": "We prioritize client requirements, delivering tailored construction solutions that exceed long-term expectations."
-    },
-    "teamwork": {
-      "title": "Responsibility & Teamwork",
-      "description": "Our collaborative culture drives professional accountability and seamless project execution at every milestone."
-    },
-    "sustainability": {
-      "title": "Safety & Sustainability",
-      "description": "We enforce strict safety protocols and sustainable building practices to protect our workforce and the environment."
-    }
-  },
-
-  "newsletterTitle": "Subscribe To Newsletter",
-  "newsletterDesc": "Stay informed with updates, and expert advice from us.",
-  "newsletterPlaceholder": "Enter your email for updates",
-  "newsletterSend": "Send",
-
-  "footerDesc": "Burj-e-Zamin is fully committed to quality, innovation, and client satisfaction, consistently striving to deliver lasting, safe, and valuable projects.",
-  "company": "Company",
-  "aboutUs": "About Us",
-  "ourClients": "Our Clients",
-  "projectsLink": "Projects",
-  "servicesLink": "Services",
-  "contactLink": "Contact",
-  "contactUsLink": "Contact Us",
-  "newsletter": "Newsletter",
-  "locationLink": "Location",
-  "information": "Information",
-  "support": "Support",
-  "faqs": "FAQs",
-  "helpCenter": "Help Center",
-  "moreInfo": "More Info",
-  "privacy": "Privacy",
-  "contactInfo": "Contact Info",
-  "allRights": "© {{year}} all rights reserved."
+  "successMessage": "Your message has been sent successfully!"
 }

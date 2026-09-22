@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaInstagram, FaFacebook, FaYoutube, FaTelegram } from "react-icons/fa";
-
-import { SendIcon, Phone, LocationEdit, MailIcon } from "lucide-react";
-
 import { useTranslation } from "react-i18next";
+import { FaCalendarAlt } from "react-icons/fa";
+import { LucideClock } from "lucide-react";
+
+import SectionHeading from "./SectionHeading";
+import Button from "./Button";
 
 function Contact({ getDirection }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const isRTL = getDirection() === "rtl";
   const { t } = useTranslation();
 
   const {
@@ -19,14 +19,18 @@ function Contact({ getDirection }) {
   } = useForm();
 
   const onSubmit = (data) => {
-    const message = encodeURIComponent(
-      `Hello, my name is ${data.fullName}\n` +
-        `Phone: ${data.phone}\n` +
-        `Email: ${data.email}\n` +
-        `Message: ${data.comments || "-"}`,
-    );
+    const targetPhoneNumber = "93788134182";
 
-    const whatsappURL = `https://wa.me/93703660660?text=${message}`;
+    const messageTemplate = `Hello! I would like to book an appointment.
+
+    *Name:* ${data.fullName}
+    *Phone:* ${data.phone}
+    *Email:* ${data.email || "N/A"}
+    *Preferred Time:* ${data.appointmentTime || "N/A"}
+    *Message:* ${data.comments || "N/A"}`;
+
+    const encodedMessage = encodeURIComponent(messageTemplate);
+    const whatsappURL = `https://wa.me/${targetPhoneNumber}?text=${encodedMessage}`;
 
     window.open(whatsappURL, "_blank");
 
@@ -39,225 +43,183 @@ function Contact({ getDirection }) {
   };
 
   return (
-    <>
-      <section
-        id="contact"
-        dir={getDirection()}
-        className="relative w-full px-4 sm:px-6 md:px-8 py-12 lg:px-16 lg:py-20 max-w-[88rem] 2xl:max-w-[90rem] mx-auto"
-      >
-        <div className="space-y-10 sm:space-y-10 md:space-y-12 lg:space-y-14">
-          <div className="text-center space-y-2 md:space-y-3">
-            <div
-              className={`inline-block tracking-wider ${isRTL ? "border-r-4" : "border-l-4"} border-colors-primaryColorDark`}
-            >
-              <p className="mx-4 font-medium md:text-lg lg:text-xl">
-                {t("contactSection")}
-              </p>
-            </div>
+    <section
+      id="contact"
+      dir={getDirection ? getDirection() : "ltr"}
+      className="px-4 sm:px-6 xl:px-24 py-16 lg:py-24"
+    >
+      <div className="mx-auto space-y-8 lg:space-y-12 py-8 lg:py-14 px-4 sm:px-6 xl:px-12 bg-colors-primary-50 rounded-xl">
+        {/* Section Heading */}
+        <SectionHeading title={t("contactPageTitle")} />
 
-            <h2 className="text-h2 font-semibold leading-tight">
-              {t("contactTitle")}{" "}
-              <span className="text-colors-primaryColorDark">
-                {t("contactHighlight")}
-              </span>{" "}
-              {t("contactTitleEnd")}
-            </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          {/* Left Column: Image with Working Hours Badge */}
+          <div className="lg:col-span-5 flex flex-col gap-6">
+            <div className="relative w-full h-[280px] sm:h-[350px] lg:h-full min-h-[280px] rounded-2xl overflow-hidden shadow-sm border border-colors-primary-100">
+              <img
+                src="/images/contact-us-image.webp"
+                alt={t("contactImageAlt")}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-colors-primary-900/60 via-transparent to-transparent" />
 
-            <p className="text-sm md:text-base text-colors-textDarkGray text-center max-w-2xl mx-auto">
-              {t("contactDesc")}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-8">
-            <div className="max-w-[500px]">
-              <div className="space-y-6 lg:space-y-10">
-                <div className="space-y-2 lg:space-y-3">
-                  <h2 className="font-semibold text-h2 md:leading-[1.3]">
-                    {t("contactAltTitle")}
-                  </h2>
-                  <p className="text-sm md:text-base text-colors-textDarkGray">
-                    {t("contactAltDesc")}
-                  </p>
+              {/* Floating Working Hours Badge */}
+              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-sm border border-white/50 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-colors-accent-500 text-white flex items-center justify-center shrink-0">
+                  <LucideClock className="w-5 h-5" />
                 </div>
-                <div className="flex flex-col gap-6 lg:gap-8">
-                  <div className="flex items-center gap-3">
-                    <p className="p-2 md:p-4 bg-colors-primaryColorDark/70 rounded-full">
-                      <Phone className="w-4 h-4 md:w-5 md:h-5 text-colors-textLightColor" />
-                    </p>
-                    <div className="">
-                      <h4 className="text-h4 font-bold">{t("phone")}</h4>
-                      <a
-                        href="tel:+93711580580"
-                        className="text-sm md:text-base hover:text-colors-secondTextColor transition-colors duration-300"
-                      >
-                        <bdi>+93 711 580 580</bdi>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <p className="p-2 md:p-4 bg-colors-primaryColorDark/70 rounded-full">
-                      <LocationEdit className="w-4 h-4 md:w-5 md:h-5 text-colors-textLightColor" />
-                    </p>
-                    <div className="">
-                      <h4 className="text-h4 font-bold">{t("location")}</h4>
-                      <p className="text-sm md:text-base">
-                        {t("clientLocation")}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <p className="p-2 md:p-4 bg-colors-primaryColorDark/70 rounded-full">
-                      <MailIcon className="w-4 h-4 md:w-5 md:h-5 text-colors-textLightColor" />
-                    </p>
-                    <div className="">
-                      <h4 className="text-h4 font-bold">{t("email")}</h4>
-                      <a
-                        href="mailto:info@burjezamincc.com"
-                        className="text-sm md:text-base hover:text-colors-secondTextColor transition-colors duration-300"
-                      >
-                        info@burjezamincc.com
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap gap-2 lg:gap-4 text-lg lg:text-2xl">
-                    <a
-                      href="https://www.instagram.com/burjezamin?igsh=MW8yenlqdnFlaWJlcw=="
-                      className="media-link"
-                      target="_blank"
-                    >
-                      <FaInstagram />
-                    </a>
-                    <a
-                      href="https://www.youtube.com/"
-                      className="media-link"
-                      target="_blank"
-                    >
-                      <FaYoutube />
-                    </a>
-                    <a
-                      href="https://www.facebook.com/share/14ouu5honQm/?mibextid=LQQJ4d"
-                      className="media-link"
-                      target="_blank"
-                    >
-                      <FaFacebook />
-                    </a>
-                    <a
-                      href="https://telegram.com/"
-                      className="media-link"
-                      target="_blank"
-                    >
-                      <FaTelegram />
-                    </a>
-                  </div>
+                <div>
+                  <h4 className="font-title font-bold text-sm text-colors-textDarkColor">
+                    {t("workingHoursTitle")}
+                  </h4>
+                  <p className="font-body text-xs text-colors-textLightGray">
+                    {t("workingHoursText")}
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="max-w-4xl bg-colors-bg p-4 md:p-6 rounded-lg -order-1 lg:order-1">
-              <form
-                className="flex flex-col gap-4 lg:gap-5"
-                onSubmit={handleSubmit(onSubmit)}
-              >
-                <div className="flex items-center justify-center gap-2">
-                  <div className="space-y-2 w-full sm:w-1/2">
-                    <label htmlFor="fullName" className="text-sm lg:text-base">
-                      {t("fullName")}
-                    </label>
-                    <div className="">
-                      <input
-                        placeholder={t("fullNamePlaceholder")}
-                        id="fullName"
-                        type="text"
-                        className={`input ${
-                          errors.fullName ? "!border-red" : ""
-                        }`}
-                        {...register("fullName", {
-                          required: t("nameError"),
-                        })}
-                      />
-                    </div>
-                    {errors.fullName && (
-                      <p className="error">{errors.fullName.message}</p>
-                    )}
-                  </div>
-
-                  <div className="space-y-2 w-full sm:w-1/2">
-                    <label htmlFor="phone" className="text-sm lg:text-base">
-                      {t("phoneNumber")}
-                    </label>
-                    <div className="">
-                      <input
-                        placeholder={t("phonePlaceholder")}
-                        type="tel"
-                        id="phone"
-                        className={`input ${errors.phone ? "!border-red" : ""}`}
-                        {...register("phone", {
-                          required: t("phoneError"),
-                          minLength: {
-                            value: 9,
-                            message: t("phoneInvalid"),
-                          },
-                        })}
-                      />
-                    </div>
-                    {errors.phone && (
-                      <p className="error">{errors.phone.message}</p>
-                    )}
-                  </div>
-                </div>
-
-                <div className="space-y-2 w-full">
-                  <label className="text-sm lg:text-base">
-                    {t("userEmail")}
+          {/* Right Column: Contact & Appointment Form */}
+          <div className="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-colors-primary-100 shadow-sm">
+            <form
+              className="flex flex-col gap-4 lg:gap-5"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                {/* Full Name */}
+                <div className="space-y-2 w-full sm:w-1/2">
+                  <label
+                    htmlFor="fullName"
+                    className="text-sm lg:text-base font-title font-bold text-colors-textDarkColor"
+                  >
+                    {t("fullName")}
                   </label>
-                  <div className="">
-                    <input
-                      placeholder={t("emailPlaceholder")}
-                      type="email"
-                      autoComplete="off"
-                      className={`input ${errors.email ? "!border-red" : ""}`}
-                      {...register("email", {
-                        required: t("emailError"),
-                        pattern: {
-                          value:
-                            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                          message: t("emailInvalid"),
-                        },
-                      })}
-                    />
-                  </div>
-                  {errors.email && (
-                    <p className="error">{errors.email.message}</p>
+                  <input
+                    placeholder={t("fullNamePlaceholder")}
+                    id="fullName"
+                    type="text"
+                    className={`input w-full ${errors.fullName ? "!border-red-500" : ""}`}
+                    {...register("fullName", {
+                      required: t("nameError"),
+                    })}
+                  />
+                  {errors.fullName && (
+                    <p className="error text-xs text-red-500">
+                      {errors.fullName.message}
+                    </p>
                   )}
                 </div>
 
-                <div className="space-y-2 w-full">
-                  <label htmlFor="comments" className="text-sm lg:text-base">
-                    {t("comments")}
+                {/* Phone Number */}
+                <div className="space-y-2 w-full sm:w-1/2">
+                  <label
+                    htmlFor="phone"
+                    className="text-sm lg:text-base font-title font-bold text-colors-textDarkColor"
+                  >
+                    {t("phoneNumber")}
                   </label>
-                  <textarea
-                    placeholder={t("commentsPlaceholder")}
-                    id="comments"
-                    className="input h-28 lg:h-40"
-                    {...register("comments")}
-                  ></textarea>
+                  <input
+                    placeholder={t("phonePlaceholder")}
+                    type="tel"
+                    id="phone"
+                    className={`input w-full ${errors.phone ? "!border-red-500" : ""}`}
+                    {...register("phone", {
+                      required: t("phoneError"),
+                      minLength: {
+                        value: 9,
+                        message: t("phoneInvalid"),
+                      },
+                    })}
+                  />
+                  {errors.phone && (
+                    <p className="error text-xs text-red-500">
+                      {errors.phone.message}
+                    </p>
+                  )}
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                {/* Email */}
+                <div className="space-y-2 w-full sm:w-1/2">
+                  <label className="text-sm lg:text-base font-title font-bold text-colors-textDarkColor">
+                    {t("userEmail")}
+                  </label>
+                  <input
+                    placeholder={t("emailPlaceholder")}
+                    type="email"
+                    autoComplete="off"
+                    className={`input w-full ${errors.email ? "!border-red-500" : ""}`}
+                    {...register("email", {
+                      required: t("emailError"),
+                      pattern: {
+                        value:
+                          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                        message: t("emailInvalid"),
+                      },
+                    })}
+                  />
+                  {errors.email && (
+                    <p className="error text-xs text-red-500">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
 
-                <button type="submit" className="button justify-center">
-                  {t("submit")} <SendIcon className="w-4 h-4 md:w-5 md:h-5" />
-                </button>
+                {/* Preferred Appointment Time */}
+                <div className="space-y-2 w-full sm:w-1/2">
+                  <label
+                    htmlFor="appointmentTime"
+                    className="text-sm lg:text-base font-title font-bold text-colors-textDarkColor"
+                  >
+                    {t("formPreferredTime")}
+                  </label>
+                  <input
+                    type="time"
+                    id="appointmentTime"
+                    className="input w-full"
+                    {...register("appointmentTime")}
+                  />
+                </div>
+              </div>
 
-                {isSubmitted && (
-                  <div className="bg-green-100 text-green-700 px-4 py-3 rounded-lg text-sm mb-4 text-center">
-                    {t("successMessage")}
-                  </div>
-                )}
-              </form>
-            </div>
+              {/* Comments / Message */}
+              <div className="space-y-2 w-full">
+                <label
+                  htmlFor="comments"
+                  className="text-sm lg:text-base font-title font-bold text-colors-textDarkColor"
+                >
+                  {t("comments")}
+                </label>
+                <textarea
+                  placeholder={t("commentsPlaceholder")}
+                  id="comments"
+                  className="input w-full h-28 lg:h-36 resize-none"
+                  {...register("comments")}
+                ></textarea>
+              </div>
+
+              {/* Submit Button Component */}
+              <div className="pt-2 flex justify-start">
+                <Button
+                  type="submit"
+                  variant="primary"
+                  icon={FaCalendarAlt}
+                  text={t("hero.book_appointment")}
+                />
+              </div>
+
+              {isSubmitted && (
+                <div className="bg-green-100 text-green-700 px-4 py-3 rounded-lg text-sm mt-2 text-center">
+                  {t("successMessage")}
+                </div>
+              )}
+            </form>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
