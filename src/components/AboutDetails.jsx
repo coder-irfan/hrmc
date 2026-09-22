@@ -18,7 +18,7 @@ function AboutDetails({ getDirection }) {
           </h1>
 
           {/* Comprehensive Detailed Description */}
-          <div className="space-y-4 text-colors-textDarkGray text-base lg:text-lg leading-relaxed text-center lg:text-justify font-body">
+          <div className="space-y-4 text-colors-textDarkGray text-base lg:text-lg leading-relaxed text-justify font-body">
             <p>{t("aboutPage.description_p1")}</p>
             <p>{t("aboutPage.description_p2")}</p>
           </div>
@@ -30,7 +30,7 @@ function AboutDetails({ getDirection }) {
             src="/images/doctors-operating.webp"
             alt={t("aboutPage.title")}
             loading="lazy"
-            className="rounded-xl w-full max-w-lg lg:max-w-none h-64 sm:h-96 lg:h-[480px] object-cover shadow-lg"
+            className="rounded-xl w-full max-w-lg lg:max-w-none h-64 sm:h-96 lg:h-[400px] object-cover shadow-lg"
           />
         </div>
       </div>

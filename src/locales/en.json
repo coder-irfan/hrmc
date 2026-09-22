@@ -11,7 +11,7 @@
   "hero": {
     "title_part1": "Trusted Healthcare",
     "title_highlight": "Center for You",
-    "description": "Habib Rohani Medical Center Hospital provides world-class medical treatments, advanced diagnostic services, and compassionate patient care with modern infrastructure.",
+    "description": "Habib Rohani Medical Center Hospital delivers top-tier clinical treatments, cutting-edge diagnostic testing, and dedicated patient care through state-of-the-art medical technology.",
     "badge_title": "Certified Facility",
     "badge_subtitle": "High Quality Standards",
     "book_appointment": "Book Appointment"
@@ -47,28 +47,28 @@
   "contactLocation": "Location",
   "footerDescription": "Providing modern healthcare solutions, expert medical consultation, and 24/7 dedicated patient care.",
   "addressTitle": "Address",
-  "hospitalAddress": "Kabul, Afghanistan, Shahr-e-Naw, Ansari, 3rd Floor",
+  "hospitalAddress": "HRMC Building No:1 Street No.16, Sherpoor Main Road, Kabul",
   "contactFooterTitle": "Contact",
   "developedBy": "Designed and Developed by",
 
   "aboutShort": {
     "subtitle": "About Our Center",
     "title": "Habib Rohani Medical Center",
-    "description": "Habib Rohani Medical Center is a premier healthcare facility committed to delivering exceptional patient care. Equipped with advanced medical technologies and led by experienced specialist doctors, we provide comprehensive diagnostic, therapeutic, and preventive services tailored to community health needs.",
+    "description": "Habib Rohani Medical Center is a premier healthcare facility committed to delivering exceptional, compassionate patient care. Equipped with advanced medical technologies and led by experienced specialist doctors, we provide comprehensive diagnostic, therapeutic, surgical, and preventive services tailored to community health needs around the clock.",
     "book_appointment": "Book Appointment",
     "read_more": "Read More"
   },
 
   "aboutPage": {
-    "title": "Habib Rohani Medical Center",
-    "description_p1": "Habib Rohani Medical Center is a premier healthcare institution dedicated to providing comprehensive, high-quality medical services to our community. Established with a vision of medical excellence, our center combines modern medical technologies with a compassionate, patient-centered approach to healthcare delivery.",
-    "description_p2": "Our facility is staffed by a team of highly qualified specialist physicians, experienced clinical personnel, and dedicated support teams. We offer a broad range of outpatient services, diagnostic imaging, laboratory tests, and specialized consultations aimed at improving health outcomes and fostering long-term wellness for every patient we serve."
+    "title": "Excellence in Healthcare",
+    "description_p1": "Founded in 2025 under License 101879 and Registration Number 178560, Habib Rohani Medical Center is a premier healthcare institution dedicated to providing comprehensive, high-performance medical services across Kabul. Built on a foundation of clinical excellence, our facility pairs modern diagnostic technology with a compassionate, patient-centered approach to ensure accessible, dignified care for every family.",
+    "description_p2": "Our center is staffed by highly qualified specialist physicians, experienced clinical personnel, and dedicated support teams working around the clock. We offer an extensive range of outpatient care, emergency response, surgical expertise, and advanced diagnostic testing aimed at restoring health, improving clinical outcomes, and fostering long-term wellness throughout our community."
   },
 
   "whyUs": {
-    "title": "Why Choose Habib Rohani Medical Center?",
-    "description_p1": "At Habib Rohani Medical Center, we prioritize your health and well-being above all else. Our state-of-the-art diagnostic equipment and evidence-based treatment procedures ensure that every patient receives precise medical care in a comfortable and hygienic environment.",
-    "description_p2": "We stand out due to our compassionate clinical staff, experienced specialists across various fields, and swift, patient-focused emergency services. Choosing us means placing your health in trusted hands dedicated to delivery, accuracy, and patient safety."
+    "title": "Why Choose Us?",
+    "description_p1": "At Habib Rohani Medical Center, we prioritize your health, safety, and physical well-being above all else. Our state-of-the-art diagnostic equipment, advanced laboratory technology, strict hygiene protocols, and evidence-based clinical procedures ensure that every patient receives highly precise, dignified, and reliable medical care within a modern, exceptionally clean, and comforting environment designed for optimal healing.",
+    "description_p2": "We stand out due to our compassionate clinical staff, seasoned multi-specialty surgical experts, 24/7 emergency response units, seamless appointment scheduling, and rapid diagnostic result turnarounds. Choosing us means placing your family's health in trusted, certified hands strictly dedicated to delivering medical excellence, unmatched accuracy, transparent consultations, and uncompromised patient safety around the clock."
   },
 
   "quickContactBannerTitle": "Contact Ways With",

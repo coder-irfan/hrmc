@@ -146,10 +146,10 @@ function Footer({ getDirection }) {
                   <div className="flex items-center gap-2 sm:gap-3">
                     <LucideMail className="w-5 h-5 text-colors-accent-500 shrink-0" />
                     <a
-                      href="mailto:info@hrmc.com"
+                      href="mailto:info@hrmc.af"
                       className="text-colors-textLightColor/80 hover:textLightColor font-body text-h4 md:text-h5 transition-colors"
                     >
-                      info@hrmc.com
+                      info@hrmc.af
                     </a>
                   </div>
 

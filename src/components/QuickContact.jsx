@@ -32,7 +32,7 @@ function QuickContact({ getDirection }) {
       content: (
         <div className="space-y-1 dir-ltr text-center">
           <p className="font-body text-sm sm:text-base text-colors-textLightGray hover:text-colors-primary-600 transition-colors">
-            <a href="mailto:info@hrmc.com">info@hrmc.com</a>
+            <a href="mailto:info@hrmc.af">info@hrmc.af</a>
           </p>
           <p className="font-body text-sm sm:text-base text-colors-textLightGray hover:text-colors-primary-600 transition-colors">
             <a href="mailto:support@hrmc.com">support@hrmc.com</a>

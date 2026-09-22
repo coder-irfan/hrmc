@@ -16,7 +16,7 @@ function WhyUs({ getDirection }) {
             src="/images/hand-shake.webp"
             alt={t("whyUs.title")}
             loading="lazy"
-            className="rounded-xl w-full max-w-lg lg:max-w-none h-64 sm:h-96 lg:h-[480px] object-cover shadow-lg"
+            className="rounded-xl w-full max-w-lg lg:max-w-none h-64 sm:h-96 lg:h-[400px] object-cover shadow-lg"
           />
         </div>
 
@@ -28,7 +28,7 @@ function WhyUs({ getDirection }) {
           </h2>
 
           {/* Detailed Description */}
-          <div className="space-y-4 text-colors-textDarkGray text-base lg:text-lg leading-relaxed text-center lg:text-justify font-body">
+          <div className="space-y-4 text-colors-textDarkGray text-base lg:text-lg leading-relaxed text-justify font-body">
             <p>{t("whyUs.description_p1")}</p>
             <p>{t("whyUs.description_p2")}</p>
           </div>

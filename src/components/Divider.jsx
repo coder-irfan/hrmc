@@ -16,7 +16,7 @@ function CtaBanner({ getDirection }) {
         {/* 1. Dark Overlay (Added here inside the banner container) */}
         <div className="absolute inset-0 bg-black/50 lg:hidden" />
 
-        <div className="hidden lg:flex absolute inset-0 bg-gradient-to-r from-white via-white/40 via-5% to-transparent z-[1]" />
+        <div className="hidden lg:flex absolute inset-0 bg-gradient-to-r from-white via-white/60 via-5% to-transparent z-[1]" />
 
         {/* Left Side: Content & Action Buttons */}
         <div className="relative z-10 space-y-5 text-center lg:text-start max-w-md">
