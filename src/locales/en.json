@@ -78,6 +78,9 @@
   "quickContactAddressTitle": "Hospital Address",
   "quickContactSocialFollow": "Follow us on social media",
 
+  "locationTitle": "Our Location",
+  "LoadingMap": "Loading map...",
+
   "yearsExperience": "Years of Experience",
   "aboutDetailTag": "About Our Company",
   "aboutDetailDescription": "Burj Zamin stands as a pioneer in modern engineering and project execution, setting new benchmarks for quality construction and architectural design. Driven by technical innovation, strict safety standards, and dedicated project management, our team delivers long-lasting, cost-effective infrastructure tailored to meet the evolving demands of our clients.",
@@ -233,8 +236,6 @@
   "newsletterDesc": "Stay informed with updates, and expert advice from us.",
   "newsletterPlaceholder": "Enter your email for updates",
   "newsletterSend": "Send",
-
-  "LoadingMap": "Loading Goolge Map...",
 
   "footerDesc": "Burj-e-Zamin is fully committed to quality, innovation, and client satisfaction, consistently striving to deliver lasting, safe, and valuable projects.",
   "company": "Company",
