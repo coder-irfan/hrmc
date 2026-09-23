@@ -3,7 +3,7 @@ name: Deploy to cPanel
 on:
   push:
     branches:
-      - main 
+      - main # Change to master if your default branch is master
 
 jobs:
   build-and-deploy:
@@ -30,8 +30,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ./
           local-dir: ./dist/
-          port: 21
-          exclude: |
-            **/*.map
-            **/Thumbs.db
-            **/.DS_Store
+          protocol: ftps
+          security-options: '{"rejectUnauthorized": false}'
