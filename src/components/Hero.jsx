@@ -49,11 +49,13 @@ function Hero({ getDirection }) {
           </div>
 
           <div className="lg:col-span-5 relative flex justify-center items-center">
-            <div className="relative w-full ">
+            <div className="relative w-full">
               <img
-                src={`${isRTL ? "/images/hero-image-fa.png" : "/images/hero-image-en.png"}`}
+                src="/images/hospital-hero-bg.webp"
                 alt="HRMC Hospital"
-                className="w-full h-[300px] lg:h-[550px] object-contain"
+                className={`w-full h-[300px] lg:h-[550px] object-contain transition-transform duration-300 ${
+                  isRTL ? "scale-x-[-1]" : ""
+                }`}
               />
             </div>
 
