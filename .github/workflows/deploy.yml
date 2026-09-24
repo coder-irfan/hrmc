@@ -1,9 +1,9 @@
-name: Deploy to cPanel
+name: Deploy via SSH/Rsync
 
 on:
   push:
     branches:
-      - main # Change to master if your default branch is master
+      - main
 
 jobs:
   build-and-deploy:
@@ -22,13 +22,13 @@ jobs:
           npm ci
           npm run build
 
-      - name: FTP Deploy to cPanel
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy via Rsync over SSH
+        uses: easingthemes/ssh-deploy@v5.0.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ./public_html/
-          local-dir: ./dist/
-          protocol: ftp
-          security: loose
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+          TARGET: "/home2/hrmcaf/public_html/"
+          PORT: ${{ secrets.SSH_PORT }}
