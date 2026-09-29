@@ -33,7 +33,7 @@ function Location({ getDirection }) {
 
           {/* Google Map iFrame */}
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6573.288617194262!2d69.16485784293835!3d34.53723857990291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d16ea4c1a90225%3A0xd23076f1989907e9!2sSherpur%2C%20Kabul%2C%20Afghanistan!5e0!3m2!1sen!2sjp!4v1790039261669!5m2!1sen!2sjp"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3286.508082630121!2d69.171956!3d34.540689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDMyJzI2LjUiTiA2OcKwMTAnMTkuMCJF!5e0!3m2!1sen!2snl!4v1790673980370!5m2!1sen!2snl"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
