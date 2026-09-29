@@ -1,4 +1,4 @@
-name: Deploy React App to cPanel
+name: Deploy React App via SSH/SFTP
 
 on:
   push:
@@ -6,10 +6,8 @@ on:
       - main
 
 jobs:
-  web-deploy:
-    name: Build and Deploy
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,13 +24,11 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Sync files via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: ./
-          protocol: ftps
-          port: 21
+          username: ${{ secrets.SSH_USERNAME }}
+          server: ${{ secrets.SSH_HOST }}
+          ssh_private_key: ${{ secrets.SSH_KEY }}
+          local_path: "./dist/*"
+          remote_path: "/home2/hrmcaf/public_html/hrmc.af/"
