@@ -30,5 +30,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           server: ${{ secrets.SSH_HOST }}
           ssh_private_key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
           local_path: "./dist/*"
           remote_path: "/home2/hrmcaf/public_html/hrmc.af/"
