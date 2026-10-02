@@ -19,7 +19,10 @@ function HomeServices({ getDirection }) {
       try {
         const data = await getHomeServices();
         if (isMounted) {
-          setServices(data);
+          const shuffled = [...data]
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 7);
+          setServices(shuffled);
           setLoading(false);
         }
       } catch (error) {

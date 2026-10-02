@@ -1,7 +1,7 @@
 import { client } from "../sanityClient";
 
 export const getHomeServices = async () => {
-  const query = `*[_type == "service"] | order(_createdAt desc)[0...7] {
+  const query = `*[_type == "service"] {
     _id,
     title,
     "slug": slug.current,
