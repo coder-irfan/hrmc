@@ -1,4 +1,4 @@
-import{n as e}from"./chunk-CaILmz35.js";import{t}from"./Breadcrumb-DpTtYmDH.js";import{_ as n,f as r,p as i,t as a,y as o}from"./index-DF7KT6iM.js";import{n as s,t as c}from"./sanityClient-G0xgMogw.js";var l=e(o(),1),u=r();function d({getDirection:e}){let{t}=i(),{lang:r=`en`,slug:o}=n(),d=e?e():`ltr`,[f,p]=(0,l.useState)(null),[m,h]=(0,l.useState)(!0);(0,l.useEffect)(()=>{let e=!0;return h(!0),o&&(async()=>{try{let t=await c.fetch(`*[_type == "blog" && slug.current == $slug][0]{
+import{n as e}from"./chunk-CaILmz35.js";import{t}from"./Breadcrumb-B6MwHEMR.js";import{_ as n,f as r,p as i,t as a,y as o}from"./index-CV2ACDM1.js";import{n as s,t as c}from"./sanityClient-Do6h_eZY.js";var l=e(o(),1),u=r();function d({getDirection:e}){let{t}=i(),{lang:r=`en`,slug:o}=n(),d=e?e():`ltr`,[f,p]=(0,l.useState)(null),[m,h]=(0,l.useState)(!0);(0,l.useEffect)(()=>{let e=!0;return h(!0),o&&(async()=>{try{let t=await c.fetch(`*[_type == "blog" && slug.current == $slug][0]{
           _id,
           title,
           mainImage,

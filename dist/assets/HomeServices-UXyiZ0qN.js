@@ -1,4 +1,4 @@
-import{n as e}from"./chunk-CaILmz35.js";import{_ as t,f as n,m as r,p as i,y as a}from"./index-DF7KT6iM.js";import{t as o}from"./SectionHeading-CxnPZR8z.js";import{n as s,t as c}from"./sanityClient-G0xgMogw.js";var l=e(a(),1),u=async()=>await c.fetch(`*[_type == "service"] {
+import{n as e}from"./chunk-CaILmz35.js";import{_ as t,f as n,m as r,p as i,y as a}from"./index-CV2ACDM1.js";import{t as o}from"./SectionHeading-B-DG563g.js";import{n as s,t as c}from"./sanityClient-Do6h_eZY.js";var l=e(a(),1),u=async()=>await c.fetch(`*[_type == "service"] {
     _id,
     title,
     "slug": slug.current,

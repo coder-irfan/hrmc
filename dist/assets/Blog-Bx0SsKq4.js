@@ -1,4 +1,4 @@
-import{n as e}from"./chunk-CaILmz35.js";import{n as t,r as n,t as r}from"./calendar-BJArm8aO.js";import{t as i}from"./Breadcrumb-DpTtYmDH.js";import{_ as a,f as o,p as s,t as c,y as l}from"./index-DF7KT6iM.js";import{t as u}from"./SectionHeading-CxnPZR8z.js";import{n as d,t as f}from"./sanityClient-G0xgMogw.js";var p=e(l(),1),m=async()=>await f.fetch(`*[_type == "blog"] | order(publishedAt desc) {
+import{n as e}from"./chunk-CaILmz35.js";import{n as t,r as n,t as r}from"./calendar-Dx9pkoSR.js";import{t as i}from"./Breadcrumb-B6MwHEMR.js";import{_ as a,f as o,p as s,t as c,y as l}from"./index-CV2ACDM1.js";import{t as u}from"./SectionHeading-B-DG563g.js";import{n as d,t as f}from"./sanityClient-Do6h_eZY.js";var p=e(l(),1),m=async()=>await f.fetch(`*[_type == "blog"] | order(publishedAt desc) {
     _id,
     title,
     "slug": slug.current,

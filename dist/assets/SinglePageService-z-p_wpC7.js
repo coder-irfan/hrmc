@@ -1,4 +1,4 @@
-import{n as e}from"./chunk-CaILmz35.js";import{_ as t,f as n,p as r,t as i,y as a}from"./index-DF7KT6iM.js";import{n as o,t as s}from"./sanityClient-G0xgMogw.js";var c=e(a(),1),l=n();function u({getDirection:e}){let{t:n}=r(),{lang:a=`en`,slug:u}=t(),d=e?e():`ltr`,[f,p]=(0,c.useState)(null),[m,h]=(0,c.useState)(!0);(0,c.useEffect)(()=>{let e=!0;return h(!0),u&&(async()=>{try{let t=await s.fetch(`*[_type == "service" && slug.current == $slug][0]{
+import{n as e}from"./chunk-CaILmz35.js";import{_ as t,f as n,p as r,t as i,y as a}from"./index-CV2ACDM1.js";import{n as o,t as s}from"./sanityClient-Do6h_eZY.js";var c=e(a(),1),l=n();function u({getDirection:e}){let{t:n}=r(),{lang:a=`en`,slug:u}=t(),d=e?e():`ltr`,[f,p]=(0,c.useState)(null),[m,h]=(0,c.useState)(!0);(0,c.useEffect)(()=>{let e=!0;return h(!0),u&&(async()=>{try{let t=await s.fetch(`*[_type == "service" && slug.current == $slug][0]{
           _id,
           title,
           image,
