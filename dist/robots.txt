@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block admin or internal routes if you have any (e.g. /admin)
+# Disallow: /admin
+
+# Link to your XML Sitemap
+Sitemap: https://your-domain.com/sitemap.xml
